@@ -1,50 +1,1040 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sidharth Gupta | Product Manager</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sidharth Gupta | Product Manager</title>
+
+<meta name="description"
+content="Sidharth Gupta — Product Manager with 8+ years of experience in Payments, FinTech, Payment Gateways and Product Platforms.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    background: #0b0b0f;
+    color: #f5f5f7;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,11,15,0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #222229;
+}
+
+.nav-container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid #30303a;
+    border-radius: 30px;
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 90px);
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #ffffff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 21px;
+    color: #aaa;
+    max-width: 720px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 13px 22px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    font-weight: 600;
+}
+
+.button.secondary {
+    background: transparent;
+    border: 1px solid #333;
+    color: white;
+}
+
+section {
+    padding: 110px 0;
+    border-top: 1px solid #1d1d23;
+}
+
+.section-label {
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    margin-bottom: 45px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.about-text {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    border: 1px solid #303039;
+    padding: 9px 14px;
+    border-radius: 30px;
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* EXPERIENCE */
+
+.timeline-item {
+    padding: 0 0 55px 35px;
+    border-left: 1px solid #333;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 7px;
+}
+
+.timeline-date {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.timeline-role {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.timeline-company {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.timeline-description {
+    color: #999;
+    max-width: 800px;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #292931;
+    border-radius: 18px;
+    padding: 30px;
+    background: #111116;
+    transition: transform .2s, border .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #999;
+}
+
+/* IMPACT */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    padding: 30px;
+    border: 1px solid #292931;
+    border-radius: 18px;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #888;
+}
+
+/* EDUCATION */
+
+.education-card {
+    border: 1px solid #292931;
+    border-radius: 18px;
+    padding: 30px;
+    background: #111116;
+}
+
+.education-card h3 {
+    font-size: 22px;
+}
+
+.education-card p {
+    color: #999;
+}
+
+/* CERTIFICATIONS */
+
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.certification {
+    padding: 16px;
+    border: 1px solid #292931;
+    border-radius: 10px;
+    color: #aaa;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    padding-bottom: 140px;
+}
+
+.contact h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #999;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #1d1d23;
+    padding: 25px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .about-grid,
+    .products,
+    .stats,
+    .certifications {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Hi, I'm Sidharth 👋</h1>
+<!-- NAVIGATION -->
 
-    <h2>Product Manager | FinTech | Payments</h2>
+<nav>
+<div class="container nav-container">
 
-    <p>
-        I build payment products, platforms and infrastructure
-        that make digital payments smarter and more scalable.
-    </p>
+<div class="logo">
+Sidharth.
+</div>
 
-    <h2>About Me</h2>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#products">Products</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <p>
-        Product Manager with experience across FinTech, Payments,
-        Payment Gateways and Payment Orchestration.
-    </p>
+</div>
+</nav>
 
-    <h2>Experience</h2>
 
-    <ul>
-        <li>FSS – Product Management</li>
-        <li>Razorpay</li>
-        <li>Cashfree</li>
-        <li>Setu</li>
-        <li>BigBasket</li>
-    </ul>
+<!-- HERO -->
 
-    <h2>Products</h2>
+<header class="hero">
+<div class="container hero-content">
 
-    <ul>
-        <li>PayPath – Payment Orchestration & Routing</li>
-        <li>Blaze PG – Payment Gateway Platform</li>
-        <li>Card Management System</li>
-    </ul>
+<div class="badge">
+Product Manager · FinTech · Payments
+</div>
 
-    <h2>Contact</h2>
+<h1>
+Building products<br>
+<span class="gradient">that move money.</span>
+</h1>
 
-    <p>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
-    </p>
+<p>
+Product Manager with 8+ years of experience in the Payments
+and FinTech domain, building payment platforms, gateways and
+digital payment solutions for banks and enterprise merchants.
+</p>
+
+<div class="hero-buttons">
+
+<a class="button" href="#experience">
+Explore my work →
+</a>
+
+<a class="button secondary"
+href="https://www.linkedin.com/in/sidharthgupta962"
+target="_blank">
+LinkedIn ↗
+</a>
+
+</div>
+
+</div>
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-label">
+01 — About
+</div>
+
+<h2 class="section-title">
+Product thinking meets technical depth.
+</h2>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<p>
+I am a Product Manager focused on Payments and FinTech,
+with experience across Payment Gateways, payment platforms,
+banking partnerships and digital payments.
+</p>
+
+<br>
+
+<p>
+I enjoy solving complex problems at the intersection of
+business, technology and customer experience — turning
+ambiguous requirements into scalable products.
+</p>
+
+<br>
+
+<p>
+My approach combines product vision, technical understanding,
+platform-first thinking and strong collaboration with
+engineering, design, data and business teams.
+</p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+Core Expertise
+</h3>
+
+<div class="skills">
+
+<span class="skill">Payment Gateways</span>
+<span class="skill">FinTech</span>
+<span class="skill">Product Strategy</span>
+<span class="skill">Product Roadmaps</span>
+<span class="skill">Payment Orchestration</span>
+<span class="skill">Payment Platforms</span>
+<span class="skill">Domain-Driven Design</span>
+<span class="skill">3DS / EMVCo</span>
+<span class="skill">ISO 8583</span>
+<span class="skill">Digital Payments</span>
+<span class="skill">B2B Products</span>
+<span class="skill">Figma</span>
+<span class="skill">BPMN</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-label">
+02 — Experience
+</div>
+
+<h2 class="section-title">
+Where I've worked.
+</h2>
+
+
+<div class="timeline">
+
+
+<!-- FSS -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+Apr 2023 — Present
+</div>
+
+<div class="timeline-role">
+Senior Product Associate
+</div>
+
+<div class="timeline-company">
+Financial Software & Systems (FSS) · Bengaluru
+</div>
+
+<div class="timeline-description">
+
+Owned product delivery for a full-stack Payment Gateway
+platform supporting enterprise merchants across onboarding,
+authentication, authorization, risk, transaction processing
+and reporting.
+
+<br><br>
+
+Spearheaded Blaze, FSS's next-generation payments platform,
+powering both Payment Gateway and Card Management System.
+
+<br><br>
+
+Onboarded marquee clients including Canara Bank,
+Kotak Mahindra Bank, PSB Bank, SBI, Ecentric and DU,
+driving $5M realized and $20M projected revenue.
+
+<br><br>
+
+Led Canara Bank's migration from a legacy monolithic
+architecture to Blaze and implemented OTP authentication
+and ACS improvements.
+
+<br><br>
+
+Led EMVCo-compliant 3DS authentication through Bankserv API
+integration and worked on ISO 8583 authorization requirements
+and message formats.
+
+<br><br>
+
+Owned product requirements, backlog prioritization,
+roadmap, solution design and release planning while
+working closely with engineering, design, QA and business
+teams.
+
+</div>
+
+</div>
+
+
+<!-- BIGBASKET -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+Dec 2021 — Mar 2023
+</div>
+
+<div class="timeline-role">
+Associate Product Manager
+</div>
+
+<div class="timeline-company">
+Bigbasket
+</div>
+
+<div class="timeline-description">
+
+Worked on B2B product challenges and took bbKhata as a
+project focused on solving credit issues and digitizing
+the lending journey.
+
+<br><br>
+
+Collaborated with Juspay and BNPL companies to integrate
+Simpl, Paytm Postpaid, LazyPay and TATA BNPL.
+
+<br><br>
+
+These integrations contributed to ₹28 crores of sales per month.
+
+<br><br>
+
+Monitored payment stack success rates across payment modes
+and maintained them above 85%.
+
+</div>
+
+</div>
+
+
+<!-- SETU -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+Mar 2021 — Nov 2021
+</div>
+
+<div class="timeline-role">
+Assistant Manager — Key Accounts
+</div>
+
+<div class="timeline-company">
+SETU
+</div>
+
+<div class="timeline-description">
+
+Managed relationships with key billers including IIFL Finance,
+DMI Finance, Ujjivan Bank, AU Bank, ZestMoney and MoneyTap.
+
+<br><br>
+
+Received a Recognition Award for exemplary client engagement,
+impactful product presentations and driving 3X portfolio
+growth within two quarters.
+
+</div>
+
+</div>
+
+
+<!-- CASHFREE -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+Jan 2020 — Mar 2021
+</div>
+
+<div class="timeline-role">
+Assistant Manager — Key Accounts
+</div>
+
+<div class="timeline-company">
+Cashfree Payments India
+</div>
+
+<div class="timeline-description">
+
+Managed key client relationships including CITIBank,
+AU Small Finance Bank, CSB Bank, Dunzo, RummyCulture,
+DLocal, MPL Gaming, BigBasket and CRED.
+
+<br><br>
+
+Received the GEM (Going the Extra Mile) Award.
+
+<br><br>
+
+MPL Gaming grew 8.66X transfers on Payouts while
+RummyCulture grew 6X on the PG front.
+
+</div>
+
+</div>
+
+
+<!-- RAZORPAY -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+Jun 2018 — Jan 2020
+</div>
+
+<div class="timeline-role">
+Analyst — Banking Alliances
+</div>
+
+<div class="timeline-company">
+Razorpay Software Pvt. Ltd.
+</div>
+
+<div class="timeline-description">
+
+Worked with banking partners and key clients including
+Google Pay, PhonePe, Amazon Pay, Ola, Airtel, Bank of Baroda,
+Zest Money, Flexmoney, Mobikwik and Freecharge.
+
+<br><br>
+
+Focused on facilitating banking relationships and
+supporting payment ecosystem partnerships.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="section-label">
+03 — Products
+</div>
+
+<h2 class="section-title">
+Products I've worked on.
+</h2>
+
+<div class="products">
+
+
+<div class="card">
+
+<h3>Blaze</h3>
+
+<p>
+FSS's next-generation payments platform powering
+Payment Gateway and Card Management System capabilities.
+
+Built for enterprise merchants and banks with capabilities
+across authentication, authorization, transaction processing,
+risk and reporting.
+
+<br><br>
+
+<strong>$5M realized revenue · $20M projected revenue</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>PayPath</h3>
+
+<p>
+Payment orchestration and intelligent routing platform
+designed to route transactions to the best-performing
+payment gateway while adhering to merchant and bank rules.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Payment Gateway</h3>
+
+<p>
+Full-stack Payment Gateway platform supporting enterprise
+merchants across onboarding, authentication, authorization,
+risk management, transaction processing and reporting.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>bbKhata</h3>
+
+<p>
+B2B product focused on solving credit challenges and
+digitizing the lending journey while improving customer
+acquisition and engagement.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IMPACT -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+04 — Impact
+</div>
+
+<h2 class="section-title">
+A few numbers.
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number">$5M</div>
+<div class="stat-label">
+Realized revenue driven through Blaze
+</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">$20M</div>
+<div class="stat-label">
+Projected revenue
+</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">8+</div>
+<div class="stat-label">
+Years in Payments & FinTech
+</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">₹28Cr</div>
+<div class="stat-label">
+Monthly sales contribution from BNPL integrations
+</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">85%+</div>
+<div class="stat-label">
+Payment success rate maintained at BigBasket
+</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">3X</div>
+<div class="stat-label">
+Portfolio growth within two quarters at SETU
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-label">
+05 — Education
+</div>
+
+<h2 class="section-title">
+Education.
+</h2>
+
+<div class="education-card">
+
+<h3>
+Bachelor of Technology in Engineering
+</h3>
+
+<p>PES University</p>
+
+<br>
+
+<p>
+7.75 CGPA / 10
+</p>
+
+<p>
+Secured 4 Distinction Awards during the course.
+</p>
+
+<br>
+
+<p>
+May 2014 — May 2018
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+06 — Certifications
+</div>
+
+<h2 class="section-title">
+Continuous learning.
+</h2>
+
+<div class="certifications">
+
+<div class="certification">
+Aha! Product Management Professional Certificate
+</div>
+
+<div class="certification">
+Product Management First Steps
+</div>
+
+<div class="certification">
+Product Management: Building a Product Strategy
+</div>
+
+<div class="certification">
+Technical Product Management
+</div>
+
+<div class="certification">
+Product Management: Building a Product Roadmap
+</div>
+
+<div class="certification">
+Product Management: Customer Development
+</div>
+
+<div class="certification">
+Integrating GenAI into Business Strategy
+</div>
+
+<div class="certification">
+Generative AI for Product Managers
+</div>
+
+<div class="certification">
+Becoming an AI-First Product Leader
+</div>
+
+<div class="certification">
+Artificial Intelligence Foundations: Machine Learning
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="section-label">
+07 — Contact
+</div>
+
+<h2>
+Let's build something.
+</h2>
+
+<p>
+Interested in payments, FinTech, product strategy
+or building scalable platforms?
+</p>
+
+<div class="contact-links">
+
+<a class="button"
+href="mailto:sidharthgupta962@gmail.com">
+Email me
+</a>
+
+<a class="button secondary"
+href="https://www.linkedin.com/in/sidharthgupta962"
+target="_blank">
+View LinkedIn ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Sidharth Gupta · Product Manager · FinTech & Payments
+
+</footer>
 
 </body>
 </html>
