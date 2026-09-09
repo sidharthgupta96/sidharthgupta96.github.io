@@ -1,2685 +1,2533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sidharth Gupta — Product Manager</title>
+
+<meta name="description"
+content="Sidharth Gupta — Product Manager specialising in Payments, FinTech and digital products.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Inter",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
 
-    <title>Sidharth Gupta — Product Manager</title>
+    background: #080808;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-    <meta
-        name="description"
-        content="Sidharth Gupta — Product Manager specialising in payments, fintech, platforms and AI-powered products."
-    >
+img {
+    max-width: 100%;
+    display: block;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
 
-    <style>
+/* =========================
+   NAVIGATION
+========================= */
 
-        /* =========================================================
-           GLOBAL
-        ========================================================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
-        :root {
-            --bg: #050506;
+    height: 92px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
 
-            --surface: rgba(255,255,255,0.055);
-            --surface-hover: rgba(255,255,255,0.075);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.88),
+            rgba(0,0,0,0)
+        );
+}
 
-            --border: rgba(255,255,255,0.11);
-            --border-soft: rgba(255,255,255,0.07);
+.nav-inner {
+    width: 92%;
+    max-width: 1450px;
+    margin: auto;
 
-            --text: rgba(255,255,255,0.90);
-            --text-soft: rgba(255,255,255,0.64);
-            --text-muted: rgba(255,255,255,0.44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-            --accent: #7da7ff;
-            --accent-2: #b29cff;
+.logo {
+    width: 48px;
+    height: 48px;
 
-            --radius-xl: 34px;
-            --radius-lg: 26px;
-            --radius-md: 20px;
+    border-radius: 50%;
 
-            --shadow:
-                0 20px 70px rgba(0,0,0,0.35);
+    background: #ffffff;
+    color: #080808;
 
-            --glass-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.06),
-                0 15px 50px rgba(0,0,0,0.22);
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.nav-links {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+}
 
+.nav-links a {
+    font-size: 17px;
+    font-weight: 600;
 
-        html {
-            scroll-behavior: smooth;
-        }
+    color: rgba(255,255,255,0.58);
 
+    transition: 0.25s ease;
+}
 
-        body {
-            font-family: "Inter", sans-serif;
-            background:
-                radial-gradient(
-                    circle at 15% 5%,
-                    rgba(125,167,255,0.08),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 85% 35%,
-                    rgba(178,156,255,0.06),
-                    transparent 28%
-                ),
-                var(--bg);
+.nav-links a:first-child {
+    color: #ffffff;
+}
 
-            color: var(--text);
+.nav-links a:hover {
+    color: #ffffff;
+}
 
-            line-height: 1.6;
 
-            min-height: 100vh;
+/* =========================
+   HERO
+========================= */
 
-            overflow-x: hidden;
-        }
+.hero {
+    height: 100vh;
+    min-height: 700px;
 
+    position: relative;
+    overflow: hidden;
 
-        body::before {
-            content: "";
+    display: flex;
+    align-items: center;
+}
 
-            position: fixed;
-            inset: 0;
+.hero::before {
+    content: "";
 
-            pointer-events: none;
+    position: absolute;
+    inset: 0;
 
-            background:
-                radial-gradient(
-                    circle at 50% -10%,
-                    rgba(255,255,255,0.025),
-                    transparent 35%
-                );
+    background-image:
 
-            z-index: -1;
-        }
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.80) 0%,
+            rgba(0,0,0,0.55) 42%,
+            rgba(0,0,0,0.20) 75%,
+            rgba(0,0,0,0.35) 100%
+        ),
 
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,0.42),
+            transparent 45%
+        ),
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        url("images/profile.PNG");
 
+    background-size: cover;
+    background-position: center;
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+    filter: grayscale(100%);
 
+    transform: scale(1.01);
 
-        .container {
-            width: min(1180px, calc(100% - 40px));
-            margin: 0 auto;
-        }
+    z-index: 0;
+}
 
+.hero::after {
+    content: "";
 
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
+    position: absolute;
+    inset: 0;
 
-        .navbar {
-            position: sticky;
-            top: 18px;
-            z-index: 100;
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 35%,
+            rgba(0,0,0,0.20) 100%
+        );
 
-            width: min(1180px, calc(100% - 40px));
+    pointer-events: none;
 
-            margin: 18px auto 0;
+    z-index: 1;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.hero-content {
+    position: relative;
+    z-index: 2;
 
-            padding: 13px 16px 13px 22px;
+    width: 92%;
+    max-width: 1450px;
 
-            background: rgba(255,255,255,0.055);
+    margin: auto;
 
-            border: 1px solid rgba(255,255,255,0.11);
+    padding-top: 60px;
+}
 
-            border-radius: 999px;
+.hero-kicker {
+    font-size: 14px;
+    font-weight: 650;
 
-            backdrop-filter: blur(24px) saturate(150%);
-            -webkit-backdrop-filter: blur(24px) saturate(150%);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 
-            box-shadow:
-                0 10px 40px rgba(0,0,0,0.25),
-                inset 0 1px 0 rgba(255,255,255,0.07);
-        }
+    margin-bottom: 25px;
 
+    color: rgba(255,255,255,0.78);
+}
 
-        .nav-logo {
-            font-size: 16px;
+.hero-title {
+    font-size: clamp(52px, 6.7vw, 105px);
 
-            font-weight: 600;
+    line-height: 0.94;
 
-            letter-spacing: -0.02em;
+    letter-spacing: -5px;
 
-            color: rgba(255,255,255,0.88);
+    font-weight: 800;
 
-            white-space: nowrap;
-        }
+    max-width: 1100px;
+}
 
+.hero-title .muted {
+    color: rgba(255,255,255,0.50);
+}
 
-        .nav-links {
-            display: flex;
+.hero-subtitle {
+    margin-top: 32px;
 
-            align-items: center;
+    max-width: 680px;
 
-            gap: 6px;
-        }
+    font-size: 17px;
 
+    line-height: 1.7;
 
-        .nav-links a {
-            padding: 9px 15px;
+    color: rgba(255,255,255,0.70);
+}
 
-            border-radius: 999px;
+.hero-actions {
+    display: flex;
+    gap: 12px;
 
-            color: rgba(255,255,255,0.62);
+    margin-top: 32px;
 
-            font-size: 13px;
+    flex-wrap: wrap;
+}
 
-            font-weight: 500;
+.hero-btn {
+    padding: 12px 20px;
 
-            transition:
-                background 0.25s ease,
-                color 0.25s ease,
-                transform 0.25s ease;
-        }
+    border: 1px solid rgba(255,255,255,0.38);
 
+    background: rgba(0,0,0,0.24);
 
-        .nav-links a:hover {
-            color: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
 
-            background: rgba(255,255,255,0.08);
+    border-radius: 4px;
 
-            transform: translateY(-1px);
-        }
+    font-size: 13px;
+    font-weight: 650;
 
+    transition: 0.25s ease;
+}
 
-        /* =========================================================
-           HERO
-        ========================================================= */
+.hero-btn:hover {
+    background: #ffffff;
+    color: #080808;
 
-        .hero {
-            position: relative;
+    border-color: #ffffff;
+}
 
-            min-height: 720px;
+.hero-btn-primary {
+    background: #ffffff;
+    color: #080808;
 
-            display: flex;
+    border-color: #ffffff;
+}
 
-            align-items: center;
 
-            overflow: hidden;
+/* =========================
+   SCROLL INDICATOR
+========================= */
 
-            border-radius: var(--radius-xl);
+.scroll-indicator {
+    position: absolute;
 
-            margin-top: 24px;
+    right: 0;
+    top: 50%;
 
-            border: 1px solid rgba(255,255,255,0.10);
+    transform: translateY(-50%);
 
-            background-image:
+    z-index: 5;
 
-                linear-gradient(
-                    90deg,
-                    rgba(5,5,6,0.98) 0%,
-                    rgba(5,5,6,0.93) 28%,
-                    rgba(5,5,6,0.72) 46%,
-                    rgba(5,5,6,0.34) 66%,
-                    rgba(5,5,6,0.08) 84%,
-                    rgba(5,5,6,0.02) 100%
-                ),
+    width: 48px;
+    height: 105px;
 
-                url("images/profile.PNG");
+    background: rgba(255,255,255,0.10);
 
-            background-size: cover;
+    border-radius: 10px 0 0 10px;
 
-            background-position: right center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            background-repeat: no-repeat;
+    writing-mode: vertical-rl;
 
-            box-shadow:
-                0 25px 90px rgba(0,0,0,0.40),
-                inset 0 1px 0 rgba(255,255,255,0.06);
-        }
+    font-size: 11px;
+    letter-spacing: 2px;
 
+    color: rgba(255,255,255,0.70);
+}
 
-        .hero::after {
-            content: "";
 
-            position: absolute;
+/* =========================
+   SECTIONS
+========================= */
 
-            inset: 0;
+section {
+    padding: 120px 0;
 
-            pointer-events: none;
+    background: #080808;
 
-            background:
-                linear-gradient(
-                    180deg,
-                    rgba(255,255,255,0.025),
-                    transparent 30%,
-                    rgba(0,0,0,0.12)
-                );
+    border-top: 1px solid #1b1b1b;
+}
 
-            z-index: 1;
-        }
+.section-kicker {
+    font-size: 11px;
 
+    letter-spacing: 3px;
+    text-transform: uppercase;
 
-        .hero-content {
-            position: relative;
+    color: #6ea8ff;
 
-            z-index: 2;
+    margin-bottom: 14px;
+}
 
-            width: 58%;
+.section-title {
+    font-size: clamp(38px, 5vw, 66px);
 
-            padding: 80px 0 80px 70px;
-        }
+    line-height: 1;
 
+    letter-spacing: -3px;
 
-        .hero-eyebrow {
-            display: inline-flex;
+    margin-bottom: 25px;
+}
 
-            align-items: center;
+.section-description {
+    color: #8e8e95;
 
-            gap: 8px;
+    max-width: 760px;
 
-            padding: 8px 14px;
+    font-size: 16px;
 
-            margin-bottom: 26px;
+    line-height: 1.8;
 
-            border-radius: 999px;
+    margin-bottom: 55px;
+}
 
-            background: rgba(255,255,255,0.06);
 
-            border: 1px solid rgba(255,255,255,0.10);
+/* =========================
+   PLAYER PROFILE
+========================= */
 
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+.profile-section {
+    padding-top: 55px;
+    border-top: none;
+}
 
-            color: rgba(255,255,255,0.62);
+.profile-grid {
+    display: grid;
 
-            font-size: 12px;
+    grid-template-columns: repeat(4, 1fr);
 
-            font-weight: 500;
+    gap: 1px;
 
-            letter-spacing: 0.01em;
-        }
+    background: #252525;
 
+    border: 1px solid #252525;
+}
 
-        .eyebrow-dot {
-            width: 7px;
+.profile-card {
+    background: #0d0d0d;
 
-            height: 7px;
+    padding: 30px;
 
-            border-radius: 50%;
+    min-height: 160px;
+}
 
-            background: #7da7ff;
+.profile-number {
+    font-size: 36px;
 
-            box-shadow:
-                0 0 12px rgba(125,167,255,0.8);
-        }
+    font-weight: 800;
 
+    letter-spacing: -2px;
 
-        .hero-title {
-            font-size: clamp(48px, 5.5vw, 82px);
+    color: #ffffff;
 
-            line-height: 1.05;
+    margin-bottom: 8px;
+}
 
-            letter-spacing: -0.045em;
+.profile-label {
+    color: #77777f;
 
-            font-weight: 600;
+    font-size: 12px;
 
-            color: rgba(255,255,255,0.78);
+    line-height: 1.6;
+}
 
-            margin: 0 0 30px;
 
-            max-width: 780px;
+/* =========================
+   ABOUT
+========================= */
 
-            text-shadow:
-                0 3px 25px rgba(0,0,0,0.40);
-        }
+.about-content {
+    width: 100%;
+    max-width: 1080px;
+}
 
+.about-main p {
+    font-size: 21px;
 
-        .hero-description {
-            max-width: 600px;
+    line-height: 1.8;
 
-            color: rgba(255,255,255,0.57);
+    color: #b6b6bd;
 
-            font-size: 17px;
+    margin-bottom: 25px;
+}
 
-            line-height: 1.75;
+.about-highlight {
+    margin-top: 60px;
 
-            margin-bottom: 34px;
-        }
+    display: grid;
 
+    grid-template-columns: repeat(3, 1fr);
 
-        .hero-buttons {
-            display: flex;
+    gap: 14px;
+}
 
-            align-items: center;
+.about-card {
+    padding: 28px;
 
-            gap: 12px;
+    border: 1px solid #242424;
 
-            flex-wrap: wrap;
-        }
+    background: #101010;
 
+    transition: 0.25s ease;
+}
 
-        /* =========================================================
-           BUTTONS
-        ========================================================= */
+.about-card:hover {
+    border-color: #414141;
 
-        .btn {
-            display: inline-flex;
+    transform: translateY(-2px);
+}
 
-            align-items: center;
+.about-card-icon {
+    font-size: 18px;
 
-            justify-content: center;
+    margin-bottom: 18px;
 
-            gap: 9px;
+    color: #6ea8ff;
+}
 
-            min-height: 46px;
+.about-card h3 {
+    font-size: 18px;
 
-            padding: 0 21px;
+    margin-bottom: 10px;
+}
 
-            border-radius: 999px;
+.about-card p {
+    font-size: 13px;
 
-            font-size: 13px;
+    line-height: 1.7;
 
-            font-weight: 600;
+    color: #77777f;
+}
 
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease,
-                border 0.25s ease,
-                box-shadow 0.25s ease;
-        }
 
+/* =========================
+   EXPERIENCE
+========================= */
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+.journey {
+    position: relative;
+}
 
+.journey::before {
+    content: "";
 
-        .btn-primary {
-            color: rgba(255,255,255,0.95);
+    position: absolute;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(125,167,255,0.88),
-                    rgba(178,156,255,0.80)
-                );
+    left: 9px;
 
-            border: 1px solid rgba(255,255,255,0.18);
+    top: 10px;
 
-            box-shadow:
-                0 8px 28px rgba(90,100,180,0.22);
-        }
+    bottom: 10px;
 
+    width: 1px;
 
-        .btn-secondary {
-            color: rgba(255,255,255,0.75);
+    background: #303030;
+}
 
-            background: rgba(255,255,255,0.055);
+.journey-item {
+    position: relative;
 
-            border: 1px solid rgba(255,255,255,0.12);
+    padding-left: 45px;
 
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
+    margin-bottom: 30px;
+}
 
+.journey-dot {
+    position: absolute;
 
-        .btn-secondary:hover {
-            color: rgba(255,255,255,0.92);
+    left: 2px;
+    top: 25px;
 
-            background: rgba(255,255,255,0.09);
-        }
+    width: 15px;
+    height: 15px;
 
+    border-radius: 50%;
 
-        /* =========================================================
-           SECTIONS
-        ========================================================= */
+    background: #6ea8ff;
 
-        section {
-            padding: 110px 0;
-        }
+    border: 4px solid #080808;
+}
 
+.journey-card {
+    background: #101010;
 
-        .section-header {
-            margin-bottom: 42px;
-        }
+    border: 1px solid #242424;
 
+    padding: 30px;
 
-        .section-label {
-            display: inline-block;
+    transition: 0.25s ease;
+}
 
-            margin-bottom: 12px;
+.journey-card:hover {
+    border-color: #414141;
+}
 
-            color: rgba(125,167,255,0.82);
+.journey-top {
+    display: flex;
 
-            font-size: 12px;
+    justify-content: space-between;
 
-            font-weight: 600;
+    gap: 25px;
 
-            letter-spacing: 0.12em;
+    margin-bottom: 27px;
+}
 
-            text-transform: uppercase;
-        }
+.company-row {
+    display: flex;
 
+    align-items: center;
 
-        .section-title {
-            font-size: clamp(32px, 4vw, 52px);
+    gap: 17px;
+}
 
-            line-height: 1.08;
+.company-logo-box {
+    width: 88px;
+    height: 64px;
 
-            letter-spacing: -0.04em;
+    background: #ffffff;
 
-            font-weight: 600;
+    border-radius: 7px;
 
-            color: rgba(255,255,255,0.84);
-        }
+    display: flex;
 
+    align-items: center;
+    justify-content: center;
 
-        .section-description {
-            max-width: 680px;
+    padding: 7px;
 
-            margin-top: 16px;
+    flex-shrink: 0;
 
-            color: rgba(255,255,255,0.50);
+    overflow: hidden;
+}
 
-            font-size: 16px;
+.company-logo {
+    width: 100%;
+    height: 100%;
 
-            line-height: 1.75;
-        }
+    object-fit: contain;
+}
 
+.role {
+    font-size: 21px;
 
-        /* =========================================================
-           GLASS CARD
-        ========================================================= */
+    font-weight: 750;
 
-        .glass-card {
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,255,255,0.065),
-                    rgba(255,255,255,0.028)
-                );
+    line-height: 1.25;
+}
 
-            border: 1px solid rgba(255,255,255,0.09);
+.company {
+    margin-top: 4px;
 
-            border-radius: var(--radius-lg);
+    color: #85858c;
 
-            backdrop-filter: blur(24px) saturate(140%);
-            -webkit-backdrop-filter: blur(24px) saturate(140%);
+    font-size: 13px;
+}
 
-            box-shadow: var(--glass-shadow);
+.date {
+    color: #66666d;
 
-            transition:
-                transform 0.3s ease,
-                border 0.3s ease,
-                background 0.3s ease;
-        }
+    font-size: 12px;
 
+    white-space: nowrap;
+}
 
-        .glass-card:hover {
-            transform: translateY(-3px);
+.experience-bullets {
+    display: flex;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,255,255,0.075),
-                    rgba(255,255,255,0.035)
-                );
+    flex-direction: column;
 
-            border-color: rgba(255,255,255,0.14);
-        }
+    gap: 16px;
+}
 
+.experience-bullets p {
+    color: #9999a1;
 
-        /* =========================================================
-           PROFILE STATS
-        ========================================================= */
+    font-size: 14px;
 
-        .profile-grid {
-            display: grid;
+    line-height: 1.8;
+}
 
-            grid-template-columns:
-                repeat(4, 1fr);
+.experience-bullets strong {
+    color: #eeeeef;
+}
 
-            gap: 14px;
-        }
+.journey-impact {
+    display: flex;
 
+    flex-wrap: wrap;
 
-        .profile-card {
-            padding: 28px 24px;
+    gap: 7px;
 
-            min-height: 160px;
+    margin-top: 25px;
+}
 
-            display: flex;
+.impact-tag {
+    padding: 5px 9px;
 
-            flex-direction: column;
+    border: 1px solid #303030;
 
-            justify-content: space-between;
-        }
+    background: #151515;
 
+    color: #77777f;
 
-        .profile-number {
-            font-size: clamp(28px, 3vw, 42px);
+    font-size: 10px;
+}
 
-            font-weight: 600;
 
-            letter-spacing: -0.04em;
+/* =========================
+   CASHRABBIT
+========================= */
 
-            color: rgba(255,255,255,0.86);
-        }
+.project-card {
+    border: 1px solid #292929;
 
+    background: #101010;
 
-        .profile-label {
-            color: rgba(255,255,255,0.45);
+    padding: 38px;
 
-            font-size: 13px;
+    transition: 0.25s ease;
+}
 
-            line-height: 1.5;
-        }
+.project-card:hover {
+    border-color: #414141;
+}
 
+.project-header {
+    display: flex;
 
-        /* =========================================================
-           ABOUT
-        ========================================================= */
+    justify-content: space-between;
 
-        .about-card {
-            padding: 48px;
+    gap: 20px;
 
-            width: 100%;
-        }
+    margin-bottom: 25px;
+}
 
+.project-title {
+    font-size: 32px;
 
-        .about-card p {
-            color: rgba(255,255,255,0.58);
+    letter-spacing: -1px;
+}
 
-            font-size: 18px;
+.project-role {
+    color: #77777f;
 
-            line-height: 1.85;
+    font-size: 13px;
 
-            max-width: 1000px;
+    margin-top: 4px;
+}
 
-            margin-bottom: 22px;
-        }
+.project-badge {
+    border: 1px solid #353535;
 
+    padding: 6px 10px;
 
-        .about-card p:last-child {
-            margin-bottom: 0;
-        }
+    color: #77777f;
 
+    font-size: 10px;
 
-        .about-highlight {
-            color: rgba(255,255,255,0.82);
-        }
+    text-transform: uppercase;
 
+    letter-spacing: 1px;
+}
 
-        /* =========================================================
-           EXPERIENCE
-        ========================================================= */
+.project-description {
+    color: #9c9ca3;
 
-        .experience-list {
-            display: flex;
+    font-size: 15px;
 
-            flex-direction: column;
+    line-height: 1.85;
+}
 
-            gap: 18px;
-        }
+.project-note {
+    margin-top: 25px;
 
+    padding: 20px;
 
-        .experience-card {
-            padding: 34px;
-        }
+    background: #161616;
 
+    border-left: 2px solid #6ea8ff;
 
-        .experience-top {
-            display: flex;
+    color: #77777f;
 
-            align-items: flex-start;
+    font-size: 13px;
+}
 
-            justify-content: space-between;
 
-            gap: 30px;
+/* =========================
+   SKILLS
+========================= */
 
-            margin-bottom: 25px;
-        }
+.skills-grid {
+    display: flex;
 
+    flex-wrap: wrap;
 
-        .company-info {
-            display: flex;
+    gap: 8px;
+}
 
-            align-items: center;
+.skill {
+    padding: 11px 15px;
 
-            gap: 18px;
-        }
+    border: 1px solid #2b2b2b;
 
+    background: #101010;
 
-        .company-logo {
-            width: 58px;
+    color: #9999a1;
 
-            height: 58px;
+    font-size: 12px;
 
-            object-fit: contain;
+    transition: 0.2s ease;
+}
 
-            padding: 10px;
+.skill:hover {
+    border-color: #6ea8ff;
 
-            border-radius: 16px;
+    color: #ffffff;
+}
 
-            background: rgba(255,255,255,0.92);
 
-            border: 1px solid rgba(255,255,255,0.12);
-        }
+/* =========================
+   CERTIFICATIONS
+========================= */
 
+.cert-grid {
+    display: grid;
 
-        .company-name {
-            font-size: 20px;
+    grid-template-columns: repeat(2, 1fr);
 
-            font-weight: 600;
+    gap: 8px;
+}
 
-            color: rgba(255,255,255,0.84);
-        }
+.cert {
+    padding: 18px;
 
+    background: #101010;
 
-        .job-title {
-            margin-top: 4px;
+    border: 1px solid #242424;
 
-            font-size: 14px;
+    color: #8f8f96;
 
-            color: rgba(255,255,255,0.48);
-        }
+    font-size: 13px;
 
+    transition: 0.2s ease;
+}
 
-        .experience-date {
-            color: rgba(255,255,255,0.40);
+.cert:hover {
+    border-color: #404040;
 
-            font-size: 13px;
+    color: #ffffff;
+}
 
-            white-space: nowrap;
-        }
 
+/* =========================
+   EDUCATION
+========================= */
 
-        .experience-points {
-            list-style: none;
+.education-grid {
+    display: grid;
 
-            display: flex;
+    grid-template-columns: repeat(2, 1fr);
 
-            flex-direction: column;
+    gap: 15px;
+}
 
-            gap: 13px;
-        }
+.education-card {
+    padding: 30px;
 
+    border: 1px solid #242424;
 
-        .experience-points li {
-            position: relative;
+    background: #101010;
+}
 
-            padding-left: 22px;
+.education-year {
+    color: #6ea8ff;
 
-            color: rgba(255,255,255,0.54);
+    font-size: 11px;
 
-            font-size: 14px;
+    letter-spacing: 1px;
 
-            line-height: 1.75;
-        }
+    margin-bottom: 10px;
+}
 
+.education-card h3 {
+    font-size: 19px;
 
-        .experience-points li::before {
-            content: "";
+    margin-bottom: 6px;
+}
 
-            position: absolute;
+.education-card p {
+    color: #77777f;
 
-            left: 0;
+    font-size: 13px;
+}
 
-            top: 10px;
 
-            width: 6px;
+/* =========================
+   CONTACT
+========================= */
 
-            height: 6px;
+.contact-card {
+    border: 1px solid #282828;
 
-            border-radius: 50%;
+    background: #101010;
 
-            background: rgba(125,167,255,0.75);
+    padding: 35px;
+}
 
-            box-shadow:
-                0 0 10px rgba(125,167,255,0.3);
-        }
+.contact-grid {
+    display: grid;
 
+    grid-template-columns: repeat(3, 1fr);
 
-        /* =========================================================
-           PROJECTS
-        ========================================================= */
+    gap: 10px;
+}
 
-        .project-card {
-            padding: 40px;
+.contact-item {
+    padding: 20px;
 
-            position: relative;
+    border: 1px solid #292929;
 
-            overflow: hidden;
-        }
+    transition: 0.2s ease;
+}
 
+.contact-item:hover {
+    border-color: #414141;
+}
 
-        .project-card::before {
-            content: "";
+.contact-label {
+    color: #606067;
 
-            position: absolute;
+    font-size: 10px;
 
-            width: 260px;
+    letter-spacing: 1.5px;
 
-            height: 260px;
+    text-transform: uppercase;
 
-            border-radius: 50%;
+    margin-bottom: 7px;
+}
 
-            top: -160px;
+.contact-value {
+    color: #d2d2d5;
 
-            right: -100px;
+    font-size: 13px;
+}
 
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(125,167,255,0.13),
-                    transparent 70%
-                );
+.contact-value a:hover {
+    color: #6ea8ff;
+}
 
-            pointer-events: none;
-        }
 
+/* =========================
+   FOOTER
+========================= */
 
-        .project-tag {
-            display: inline-flex;
+footer {
+    border-top: 1px solid #202020;
 
-            padding: 7px 12px;
+    padding: 30px 0;
 
-            border-radius: 999px;
+    color: #55555c;
 
-            background: rgba(125,167,255,0.08);
+    font-size: 11px;
+}
 
-            border: 1px solid rgba(125,167,255,0.15);
+.footer-inner {
+    display: flex;
 
-            color: rgba(160,187,255,0.82);
+    justify-content: space-between;
+}
 
-            font-size: 11px;
 
-            font-weight: 600;
+/* =========================
+   TABLET
+========================= */
 
-            margin-bottom: 18px;
-        }
+@media(max-width: 800px) {
 
+    nav {
+        height: 76px;
+    }
 
-        .project-title {
-            font-size: 32px;
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
 
-            letter-spacing: -0.035em;
+    .nav-links {
+        gap: 18px;
+    }
 
-            color: rgba(255,255,255,0.84);
+    .nav-links a {
+        font-size: 13px;
+    }
 
-            margin-bottom: 14px;
-        }
+    .hero {
+        min-height: 700px;
+    }
 
+    .hero::before {
+        background-position: 60% center;
+    }
 
-        .project-description {
-            max-width: 850px;
+    .hero-content {
+        padding-top: 40px;
+    }
 
-            color: rgba(255,255,255,0.53);
+    .hero-kicker {
+        font-size: 11px;
+    }
 
-            font-size: 15px;
+    .hero-title {
+        font-size: clamp(47px, 11vw, 78px);
 
-            line-height: 1.8;
+        letter-spacing: -4px;
 
-            margin-bottom: 28px;
-        }
+        max-width: 650px;
+    }
 
+    .hero-subtitle {
+        font-size: 15px;
 
-        .project-points {
-            display: grid;
+        max-width: 500px;
+    }
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    .scroll-indicator {
+        display: none;
+    }
 
-            gap: 12px;
-        }
+    .profile-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .about-main p {
+        font-size: 18px;
+    }
 
-        .project-point {
-            padding: 18px;
+    .about-highlight {
+        grid-template-columns: 1fr;
+    }
 
-            border-radius: 18px;
+    .journey-top {
+        flex-direction: column;
+    }
 
-            background: rgba(255,255,255,0.035);
+    .date {
+        white-space: normal;
+    }
 
-            border: 1px solid rgba(255,255,255,0.07);
-        }
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
 
-        .project-point strong {
-            display: block;
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
-            margin-bottom: 5px;
+    .footer-inner {
+        flex-direction: column;
 
-            font-size: 13px;
+        gap: 8px;
+    }
+}
 
-            color: rgba(255,255,255,0.76);
-        }
 
+/* =========================
+   MOBILE
+========================= */
 
-        .project-point span {
-            color: rgba(255,255,255,0.42);
+@media(max-width: 500px) {
 
-            font-size: 12px;
+    .nav-links {
+        gap: 12px;
+    }
 
-            line-height: 1.55;
-        }
+    .nav-links a {
+        font-size: 12px;
+    }
 
+    .nav-links a:nth-child(2) {
+        display: none;
+    }
 
-        /* =========================================================
-           SKILLS
-        ========================================================= */
+    .hero {
+        min-height: 680px;
+    }
 
-        .skills-wrapper {
-            display: flex;
+    .hero::before {
+        background-position: 63% center;
+    }
 
-            flex-wrap: wrap;
+    .hero-title {
+        font-size: 48px;
 
-            gap: 10px;
-        }
+        letter-spacing: -3px;
 
+        line-height: 0.96;
+    }
 
-        .skill {
-            padding: 10px 16px;
+    .hero-subtitle {
+        font-size: 14px;
+    }
 
-            border-radius: 999px;
+    .hero-actions {
+        flex-direction: column;
 
-            background: rgba(255,255,255,0.045);
+        align-items: flex-start;
+    }
 
-            border: 1px solid rgba(255,255,255,0.08);
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
 
-            color: rgba(255,255,255,0.58);
+    .journey-item {
+        padding-left: 32px;
+    }
 
-            font-size: 13px;
+    .journey-card {
+        padding: 22px;
+    }
 
-            transition:
-                background 0.25s ease,
-                color 0.25s ease,
-                transform 0.25s ease;
-        }
+    .company-logo-box {
+        width: 75px;
 
+        height: 57px;
+    }
 
-        .skill:hover {
-            color: rgba(255,255,255,0.85);
+    .role {
+        font-size: 18px;
+    }
 
-            background: rgba(255,255,255,0.075);
+    .project-card {
+        padding: 23px;
+    }
 
-            transform: translateY(-2px);
-        }
+    .project-header {
+        flex-direction: column;
+    }
+}
 
 
-        /* =========================================================
-           CERTIFICATIONS
-        ========================================================= */
+/* =========================
+   REDUCED MOTION
+========================= */
 
-        .cert-grid {
-            display: grid;
+@media(prefers-reduced-motion: reduce) {
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    html {
+        scroll-behavior: auto;
+    }
 
-            gap: 12px;
-        }
+}
 
+</style>
 
-        .cert-card {
-            padding: 20px 22px;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 14px;
-        }
-
-
-        .cert-icon {
-            width: 36px;
-
-            height: 36px;
-
-            flex: 0 0 36px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 12px;
-
-            background:
-                rgba(125,167,255,0.08);
-
-            border: 1px solid rgba(125,167,255,0.12);
-
-            color: rgba(150,180,255,0.82);
-
-            font-size: 14px;
-        }
-
-
-        .cert-name {
-            color: rgba(255,255,255,0.58);
-
-            font-size: 13px;
-
-            line-height: 1.5;
-        }
-
-
-        /* =========================================================
-           EDUCATION
-        ========================================================= */
-
-        .education-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 16px;
-        }
-
-
-        .education-card {
-            padding: 30px;
-        }
-
-
-        .education-degree {
-            color: rgba(255,255,255,0.80);
-
-            font-size: 18px;
-
-            font-weight: 600;
-
-            margin-bottom: 7px;
-        }
-
-
-        .education-school {
-            color: rgba(255,255,255,0.50);
-
-            font-size: 14px;
-
-            margin-bottom: 16px;
-        }
-
-
-        .education-meta {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-        }
-
-
-        .education-meta span {
-            padding: 7px 11px;
-
-            border-radius: 999px;
-
-            background: rgba(255,255,255,0.045);
-
-            border: 1px solid rgba(255,255,255,0.07);
-
-            color: rgba(255,255,255,0.44);
-
-            font-size: 11px;
-        }
-
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
-
-        .contact-card {
-            padding: 60px 50px;
-
-            text-align: center;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-
-        .contact-card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 400px;
-
-            height: 400px;
-
-            left: 50%;
-
-            top: 50%;
-
-            transform: translate(-50%, -50%);
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(125,167,255,0.08),
-                    transparent 70%
-                );
-
-            pointer-events: none;
-        }
-
-
-        .contact-title {
-            position: relative;
-
-            font-size: clamp(34px, 4vw, 52px);
-
-            letter-spacing: -0.04em;
-
-            color: rgba(255,255,255,0.84);
-
-            margin-bottom: 14px;
-        }
-
-
-        .contact-description {
-            position: relative;
-
-            max-width: 600px;
-
-            margin: 0 auto 28px;
-
-            color: rgba(255,255,255,0.48);
-
-            font-size: 15px;
-        }
-
-
-        .contact-buttons {
-            position: relative;
-
-            display: flex;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            flex-wrap: wrap;
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            padding: 35px 0 45px;
-
-            color: rgba(255,255,255,0.34);
-
-            font-size: 12px;
-
-            text-align: center;
-        }
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
-
-        @media (max-width: 900px) {
-
-            .profile-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .project-points {
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .hero-content {
-                width: 68%;
-
-                padding-left: 45px;
-            }
-
-        }
-
-
-        @media (max-width: 768px) {
-
-            .container {
-                width: min(
-                    100% - 28px,
-                    680px
-                );
-            }
-
-
-            .navbar {
-                width: calc(100% - 28px);
-
-                top: 12px;
-
-                margin-top: 12px;
-
-                padding: 12px 16px 12px 18px;
-            }
-
-
-            .nav-links {
-                display: none;
-            }
-
-
-            .hero {
-                min-height: 680px;
-
-                border-radius: 28px;
-
-                background-image:
-
-                    linear-gradient(
-                        180deg,
-                        rgba(5,5,6,0.97) 0%,
-                        rgba(5,5,6,0.90) 34%,
-                        rgba(5,5,6,0.58) 57%,
-                        rgba(5,5,6,0.18) 82%,
-                        rgba(5,5,6,0.05) 100%
-                    ),
-
-                    url("images/profile.PNG");
-
-                background-position:
-                    72% center;
-
-                background-size: cover;
-            }
-
-
-            .hero-content {
-                width: 100%;
-
-                padding:
-                    60px 28px 70px;
-            }
-
-
-            .hero-title {
-                font-size:
-                    clamp(44px, 12vw, 62px);
-
-                line-height: 1.04;
-
-                color:
-                    rgba(255,255,255,0.80);
-            }
-
-
-            .hero-description {
-                font-size: 15px;
-
-                max-width: 520px;
-            }
-
-
-            section {
-                padding: 80px 0;
-            }
-
-
-            .profile-grid {
-                grid-template-columns:
-                    1fr 1fr;
-
-                gap: 10px;
-            }
-
-
-            .profile-card {
-                min-height: 135px;
-
-                padding: 22px 18px;
-            }
-
-
-            .profile-number {
-                font-size: 28px;
-            }
-
-
-            .about-card {
-                padding: 30px 24px;
-            }
-
-
-            .about-card p {
-                font-size: 16px;
-            }
-
-
-            .experience-card {
-                padding: 25px 20px;
-            }
-
-
-            .experience-top {
-                flex-direction: column;
-
-                gap: 15px;
-            }
-
-
-            .experience-date {
-                padding-left: 76px;
-            }
-
-
-            .company-logo {
-                width: 52px;
-
-                height: 52px;
-            }
-
-
-            .company-name {
-                font-size: 18px;
-            }
-
-
-            .cert-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .education-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .project-card {
-                padding: 30px 24px;
-            }
-
-
-            .project-title {
-                font-size: 27px;
-            }
-
-
-            .contact-card {
-                padding: 45px 25px;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            .hero {
-                min-height: 650px;
-
-                background-position:
-                    68% center;
-            }
-
-
-            .hero-title {
-                font-size: 43px;
-            }
-
-
-            .hero-eyebrow {
-                font-size: 11px;
-            }
-
-
-            .hero-buttons {
-                flex-direction: column;
-
-                align-items: stretch;
-            }
-
-
-            .btn {
-                width: 100%;
-            }
-
-
-            .profile-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .profile-card {
-                min-height: 120px;
-            }
-
-
-            .skills-wrapper {
-                gap: 8px;
-            }
-
-
-            .skill {
-                font-size: 12px;
-
-                padding: 9px 13px;
-            }
-
-        }
-
-    </style>
 </head>
 
 
 <body>
 
 
-    <!-- =========================================================
-         NAVIGATION
-    ========================================================= -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-    <header class="navbar">
+<nav>
 
-        <a href="#home" class="nav-logo">
-            Sidharth Gupta
-        </a>
+<div class="nav-inner">
 
-        <nav class="nav-links">
+<a href="#" class="logo">
+SG
+</a>
 
-            <a href="#home">Home</a>
+<div class="nav-links">
 
-            <a href="#about">About</a>
+<a href="#">
+Home
+</a>
 
-            <a href="#experience">Experience</a>
+<a href="#about">
+About
+</a>
 
-            <a href="#projects">Projects</a>
+<a href="#experience">
+Experience
+</a>
 
-            <a href="#skills">Skills</a>
+<a href="#contact">
+Contact
+</a>
 
-            <a href="#contact">Contact</a>
+</div>
 
-        </nav>
+</div>
 
-    </header>
+</nav>
 
 
 
-    <main>
+<!-- =========================================================
+     HERO / HOMEPAGE
+========================================================= -->
 
+<header class="hero">
 
-        <!-- =====================================================
-             HERO
-        ===================================================== -->
+<div class="hero-content">
 
-        <section id="home" class="container">
+<div class="hero-kicker">
 
-            <div class="hero">
+Product Manager · Payments · FinTech
 
-                <div class="hero-content">
+</div>
 
-                    <div class="hero-eyebrow">
 
-                        <span class="eyebrow-dot"></span>
+<h1 class="hero-title">
 
-                        Product Manager · Payments · FinTech
+Hi, I am Sidharth.<br>
 
-                    </div>
+I build products.<br>
 
+Solve problems.<br>
 
-                    <h1 class="hero-title">
+Move businesses forward.
 
-                        Hi, I am Sidharth.<br>
+</h1>
 
-                        I build products.<br>
 
-                        Solve problems.<br>
+<p class="hero-subtitle">
 
-                        Move businesses forward.
+8+ years building payment products, platforms and
+customer experiences across FinTech, digital commerce
+and enterprise payments.
 
-                    </h1>
+</p>
 
 
-                    <p class="hero-description">
+<div class="hero-actions">
 
-                        Product Manager with 8+ years of experience
-                        building and scaling payment products,
-                        platforms and fintech solutions.
+<a
+href="#experience"
+class="hero-btn hero-btn-primary">
 
-                    </p>
+Explore My Work
 
+</a>
 
-                    <div class="hero-buttons">
 
-                        <a
-                            href="#experience"
-                            class="btn btn-primary"
-                        >
-                            Explore my work
-                        </a>
+<a
+href="tel:+919831781326"
+class="hero-btn">
 
+📞 Call Me
 
-                        <a
-                            href="https://www.linkedin.com/in/sidharthgupta962"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-secondary"
-                        >
-                            LinkedIn ↗
-                        </a>
+</a>
 
 
-                        <a
-                            href="tel:+919831781326"
-                            class="btn btn-secondary"
-                        >
-                            Contact me
-                        </a>
+<a
+href="https://www.linkedin.com/in/sidharthgupta962"
+target="_blank"
+class="hero-btn">
 
-                    </div>
+LinkedIn
 
-                </div>
+</a>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
 
+<div class="scroll-indicator">
 
-        <!-- =====================================================
-             PROFILE
-        ===================================================== -->
+SCROLL
 
-        <section>
+</div>
 
-            <div class="container">
+</header>
 
-                <div class="section-header">
 
-                    <span class="section-label">
-                        Profile
-                    </span>
 
-                    <h2 class="section-title">
-                        Building products<br>
-                        that move the needle.
-                    </h2>
+<!-- =========================================================
+     PLAYER PROFILE
+========================================================= -->
 
-                </div>
+<section class="profile-section">
 
+<div class="container">
 
-                <div class="profile-grid">
+<div class="section-kicker">
+PLAYER PROFILE
+</div>
 
 
-                    <div class="glass-card profile-card">
+<div class="profile-grid">
 
-                        <div class="profile-number">
-                            8+
-                        </div>
 
-                        <div class="profile-label">
-                            Years of experience
-                        </div>
+<div class="profile-card">
 
-                    </div>
+<div class="profile-number">
+8+
+</div>
 
+<div class="profile-label">
 
-                    <div class="glass-card profile-card">
+Years of experience in Payments & FinTech
 
-                        <div class="profile-number">
-                            ₹20 Cr
-                        </div>
+</div>
 
-                        <div class="profile-label">
-                            Revenue-generating Ecentric
-                            enterprise payment gateway
-                            implementation
-                        </div>
+</div>
 
-                    </div>
 
+<div class="profile-card">
 
-                    <div class="glass-card profile-card">
+<div class="profile-number">
+₹20 Cr
+</div>
 
-                        <div class="profile-number">
-                            $5M
-                        </div>
+<div class="profile-label">
 
-                        <div class="profile-label">
-                            Realized revenue through
-                            Blaze platform commercialization
-                        </div>
+Revenue-generating Ecentric enterprise payment gateway
+implementation
 
-                    </div>
+</div>
 
+</div>
 
-                    <div class="glass-card profile-card">
 
-                        <div class="profile-number">
-                            $20M
-                        </div>
+<div class="profile-card">
 
-                        <div class="profile-label">
-                            Projected revenue from
-                            Blaze platform
-                        </div>
+<div class="profile-number">
+$5M
+</div>
 
-                    </div>
+<div class="profile-label">
 
+Realized revenue through Blaze platform commercialization
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
 
+<div class="profile-card">
 
+<div class="profile-number">
+$20M
+</div>
 
-        <!-- =====================================================
-             ABOUT
-        ===================================================== -->
+<div class="profile-label">
 
-        <section id="about">
+Projected revenue from Blaze platform
 
-            <div class="container">
+</div>
 
-                <div class="section-header">
+</div>
 
-                    <span class="section-label">
-                        About me
-                    </span>
 
-                    <h2 class="section-title">
-                        Product thinking.<br>
-                        Business impact.
-                    </h2>
+</div>
 
-                </div>
+</div>
 
+</section>
 
-                <div class="glass-card about-card">
 
-                    <p>
 
-                        As a <span class="about-highlight">
-                        Product Manager
-                        </span>, I bring expertise in payments
-                        platforms and payment gateways, driving
-                        large-scale product migrations and launching
-                        innovative solutions.
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
-                    </p>
+<section id="about">
 
+<div class="container">
 
-                    <p>
+<div class="section-kicker">
+ABOUT ME
+</div>
 
-                        Skilled in
-                        <span class="about-highlight">
-                        Domain-Driven Design (DDD),
-                        product orchestration,
-                        and platform-first thinking.
-                        </span>
 
-                    </p>
+<h2 class="section-title">
 
+Product thinking<br>
+meets payments.
 
-                    <p>
+</h2>
 
-                        A strong collaborator, working closely with
-                        engineering, design, data, marketing, and
-                        customer success teams to combine technical
-                        depth, product vision, and communication skills
-                        in building customer-centric and
-                        revenue-generating solutions.
 
-                    </p>
+<div class="about-content">
 
-                </div>
+<div class="about-main">
 
-            </div>
+<p>
 
-        </section>
+As a Product Manager, I bring expertise in payments
+platforms and payment gateways, driving large-scale
+product migrations and launching innovative solutions.
 
+</p>
 
 
-        <!-- =====================================================
-             EXPERIENCE
-        ===================================================== -->
+<p>
 
-        <section id="experience">
+Skilled in Domain-Driven Design (DDD), product
+orchestration, and platform-first thinking.
 
-            <div class="container">
+</p>
 
-                <div class="section-header">
 
-                    <span class="section-label">
-                        Experience
-                    </span>
+<p>
 
-                    <h2 class="section-title">
-                        Where I've built.
-                    </h2>
+A strong collaborator, working closely with engineering,
+design, data, marketing, and customer success teams to
+combine technical depth, product vision, and communication
+skills in building customer-centric and revenue-generating
+solutions.
 
-                </div>
+</p>
 
+</div>
 
-                <div class="experience-list">
 
+<div class="about-highlight">
 
-                    <!-- FSS -->
 
-                    <div class="glass-card experience-card">
+<div class="about-card">
 
-                        <div class="experience-top">
+<div class="about-card-icon">
+01
+</div>
 
-                            <div class="company-info">
+<h3>
+Payments & FinTech
+</h3>
 
-                                <img
-                                    src="images/IMG_1172.jpeg"
-                                    class="company-logo"
-                                    alt="FSS"
-                                >
+<p>
 
-                                <div>
+Payment gateways, payment platforms, digital wallets,
+tokenisation, 3DS, BNPL and payment orchestration.
 
-                                    <div class="company-name">
-                                        FSS
-                                    </div>
+</p>
 
-                                    <div class="job-title">
-                                        Senior Product Associate
-                                    </div>
+</div>
 
-                                </div>
 
-                            </div>
+<div class="about-card">
 
+<div class="about-card-icon">
+02
+</div>
 
-                            <div class="experience-date">
-                                Apr 2023 – Present
-                            </div>
+<h3>
+0 → 1 Product Building
+</h3>
 
-                        </div>
+<p>
 
+Product strategy, roadmap, requirements, engineering
+execution, launch and commercialisation.
 
-                        <ul class="experience-points">
+</p>
 
-                            <li>
-                                Served as primary product owner for
-                                FSS's flagship South African payment
-                                processor client — Ecentric, driving
-                                end-to-end product delivery across a
-                                ₹20 crore revenue-generating enterprise
-                                payment gateway implementation, covering
-                                the full transaction lifecycle from
-                                institution onboarding through live
-                                merchant transaction processing.
-                            </li>
+</div>
 
 
-                            <li>
-                                Defined and delivered core gateway
-                                capabilities for Ecentric including
-                                EMVCo 3DS authentication via
-                                BankservAfrica, network tokenisation
-                                through Visa Token Service and
-                                Mastercard SCOF, Token Vault and
-                                Postilion switch integration for
-                                authorization routing and reporting.
-                            </li>
+<div class="about-card">
 
+<div class="about-card-icon">
+03
+</div>
 
-                            <li>
-                                Owned multiple critical modules of the
-                                Payment Gateway including Apple Pay,
-                                Samsung Pay and Google Pay into Blaze
-                                Payment Gateway.
-                            </li>
+<h3>
+Cross-functional Leadership
+</h3>
 
+<p>
 
-                            <li>
-                                Leveraged AI tools including ChatGPT,
-                                Claude and CoPilot to author user
-                                stories and improve product
-                                specification workflows.
-                            </li>
+Engineering, design, data, marketing, customer success,
+banks and enterprise merchants.
 
+</p>
 
-                            <li>
-                                Spearheaded Blaze, FSS's next-generation
-                                payments platform powering both Payment
-                                Gateway and Card Management System;
-                                onboarded marquee clients including
-                                Canara Bank, Kotak Bank, PSB Bank, SBI,
-                                Ecentric and DU, driving $5M realized
-                                and $20M projected revenue.
-                            </li>
+</div>
 
 
-                            <li>
-                                Recognized with the Team of the Quarter
-                                award for platform commercialization
-                                success.
-                            </li>
+</div>
 
+</div>
 
-                            <li>
-                                Conceptualised and proposed PayPath,
-                                a payment orchestration layer designed
-                                to route transactions intelligently
-                                across multiple payment gateways based
-                                on real-time performance signals.
-                            </li>
+</section>
 
 
-                            <li>
-                                Defined the end-to-end product roadmap
-                                for PayPath, prioritising core routing
-                                logic and gateway failover followed by
-                                performance-based dynamic routing and
-                                analytics.
-                            </li>
 
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
 
-                            <li>
-                                Drove checkout experience enhancements
-                                including multilingual payment pages,
-                                dynamic offer display at checkout and
-                                merchant-level UI personalisation.
-                            </li>
+<section id="experience">
 
-                        </ul>
+<div class="container">
 
-                    </div>
+<div class="section-kicker">
+PLAYER JOURNEY
+</div>
 
 
+<h2 class="section-title">
+Experience
+</h2>
 
-                    <!-- BIGBASKET -->
 
-                    <div class="glass-card experience-card">
+<p class="section-description">
 
-                        <div class="experience-top">
+8+ years across Payments and FinTech, working across
+payment gateways, payment platforms, banking alliances,
+key accounts, BNPL and enterprise payment infrastructure.
 
-                            <div class="company-info">
+</p>
 
-                                <img
-                                    src="images/IMG_1171.png"
-                                    class="company-logo"
-                                    alt="BigBasket"
-                                >
 
-                                <div>
+<div class="journey">
 
-                                    <div class="company-name">
-                                        BigBasket
-                                    </div>
 
-                                    <div class="job-title">
-                                        Associate Product Manager
-                                    </div>
+<!-- FSS -->
 
-                                </div>
+<div class="journey-item">
 
-                            </div>
+<div class="journey-dot"></div>
 
+<div class="journey-card">
 
-                            <div class="experience-date">
-                                Dec 2021 – Mar 2023
-                            </div>
+<div class="journey-top">
 
-                        </div>
+<div class="company-row">
 
+<div class="company-logo-box">
 
-                        <ul class="experience-points">
+<img
+src="images/IMG_1172.jpeg"
+alt="FSS"
+class="company-logo">
 
-                            <li>
-                                Collaborated with Juspay and BNPL
-                                companies to devise strategies for
-                                customer acquisition and engagement
-                                and integrated Simpl, Paytm Postpaid,
-                                LazyPay and TATA BNPL, contributing to
-                                ₹28 crores of sales per month.
-                            </li>
+</div>
 
 
-                            <li>
-                                Owned payments success-rate monitoring
-                                across all payment modes for BigBasket's
-                                stack, maintaining success rates above
-                                85% across UPI, cards, netbanking,
-                                wallets and BNPL instruments.
-                            </li>
+<div>
 
+<div class="role">
+Senior Product Associate
+</div>
 
-                            <li>
-                                Led deep-dive RCA whenever success rates
-                                dropped below threshold, diagnosing
-                                failure patterns across payment modes
-                                and coordinating with Juspay and PG
-                                partners to drive resolution, reduce
-                                recovery time and protect GMV.
-                            </li>
+<div class="company">
+Financial Software & Systems (P) Ltd.
+</div>
 
-                        </ul>
+</div>
 
-                    </div>
+</div>
 
 
+<div class="date">
+April 2023 — Present
+</div>
 
-                    <!-- SETU -->
+</div>
 
-                    <div class="glass-card experience-card">
 
-                        <div class="experience-top">
+<div class="experience-bullets">
 
-                            <div class="company-info">
 
-                                <img
-                                    src="images/IMG_1170.png"
-                                    class="company-logo"
-                                    alt="Setu"
-                                >
+<p>
 
-                                <div>
+Served as <strong>primary product owner for FSS's flagship
+South African payment processor client — Ecentric</strong>,
+driving end-to-end product delivery across a
+<strong>₹20 crore revenue-generating enterprise payment
+gateway implementation</strong>, covering the full transaction
+lifecycle from institution onboarding through live merchant
+transaction processing.
 
-                                    <div class="company-name">
-                                        Setu.co
-                                    </div>
+</p>
 
-                                    <div class="job-title">
-                                        Assistant Manager — Key Accounts
-                                    </div>
 
-                                </div>
+<p>
 
-                            </div>
+Defined and delivered core gateway capabilities for Ecentric
+including <strong>EMVCo 3DS authentication</strong> via
+BankservAfrica, <strong>network tokenisation</strong> through
+Visa Token Service and Mastercard SCOF, <strong>Token Vault</strong>
+and <strong>Postilion switch integration</strong> for authorization
+routing and reporting.
 
+</p>
 
-                            <div class="experience-date">
-                                Mar 2021 – Nov 2021
-                            </div>
 
-                        </div>
+<p>
 
+Owned multiple critical modules of the Payment Gateway including
+<strong>Apple Pay, Samsung Pay and Google Pay</strong> into
+Blaze Payment Gateway.
 
-                        <ul class="experience-points">
+</p>
 
-                            <li>
-                                Responsible for relationship management
-                                of Key Billers including IIFL Finance,
-                                DMI Finance, Ujjivan Bank, AU Bank,
-                                ZestMoney and MoneyTap.
-                            </li>
 
+<p>
 
-                            <li>
-                                Received the Recognition Award for
-                                exemplary client engagement, impactful
-                                product presentations and driving 3X
-                                portfolio growth within two quarters
-                                through strategic sales initiatives.
-                            </li>
+Leveraged AI tools including <strong>ChatGPT, Claude and
+CoPilot</strong> to author user stories and improve product
+specification workflows.
 
-                        </ul>
+</p>
 
-                    </div>
 
+<p>
 
+Spearheaded <strong>Blaze</strong>, FSS's next-generation
+payments platform powering both Payment Gateway and Card
+Management System; onboarded marquee clients including
+<strong>Canara Bank, Kotak Bank, PSB Bank, SBI, Ecentric and
+DU</strong>, driving <strong>$5M realized and $20M projected
+revenue</strong>.
 
-                    <!-- CASHFREE -->
+</p>
 
-                    <div class="glass-card experience-card">
 
-                        <div class="experience-top">
+<p>
 
-                            <div class="company-info">
+Recognized with the <strong>Team of the Quarter</strong> award
+for platform commercialization success.
 
-                                <img
-                                    src="images/IMG_1169.png"
-                                    class="company-logo"
-                                    alt="Cashfree"
-                                >
+</p>
 
-                                <div>
 
-                                    <div class="company-name">
-                                        CashFree Payments
-                                    </div>
+<p>
 
-                                    <div class="job-title">
-                                        Assistant Manager — Key Accounts
-                                    </div>
+Conceptualised and proposed <strong>PayPath</strong>, a payment
+orchestration layer designed to route transactions intelligently
+across multiple payment gateways based on real-time performance
+signals.
 
-                                </div>
+</p>
 
-                            </div>
 
+<p>
 
-                            <div class="experience-date">
-                                Jan 2020 – Mar 2021
-                            </div>
+Defined the <strong>end-to-end product roadmap for PayPath</strong>,
+prioritising core routing logic and gateway failover followed
+by performance-based dynamic routing and analytics.
 
-                        </div>
+</p>
 
 
-                        <ul class="experience-points">
+<p>
 
-                            <li>
-                                Awarded the GEM (Going the Extra Mile)
-                                Award for effectively managing
-                                relationships with key clients.
-                            </li>
+Drove checkout experience enhancements including
+<strong>multilingual payment pages, dynamic offer display at
+checkout and merchant-level UI personalisation</strong>.
 
+</p>
 
-                            <li>
-                                MPL Gaming grew 8.66X transfers on
-                                Payouts during Q2 while RummyCulture
-                                grew 6X on the PG front.
-                            </li>
+</div>
 
 
-                            <li>
-                                Focused on incremental GMV within the
-                                existing portfolio through product
-                                fitment, cross-sell and upsell.
-                            </li>
+<div class="journey-impact">
 
+<span class="impact-tag">₹20 Cr Ecentric</span>
 
-                            <li>
-                                Managed relationships with clients
-                                including CITIBank, AU Small Finance
-                                Bank, CSB Bank, Dunzo, RummyCulture,
-                                DLocal, MPL Gaming, BigBasket and CRED.
-                            </li>
+<span class="impact-tag">Blaze</span>
 
-                        </ul>
+<span class="impact-tag">$5M Realized</span>
 
-                    </div>
+<span class="impact-tag">$20M Projected</span>
 
+<span class="impact-tag">PayPath</span>
 
+<span class="impact-tag">3DS</span>
 
-                    <!-- RAZORPAY -->
+<span class="impact-tag">Tokenisation</span>
 
-                    <div class="glass-card experience-card">
+<span class="impact-tag">Apple Pay</span>
 
-                        <div class="experience-top">
+<span class="impact-tag">Google Pay</span>
 
-                            <div class="company-info">
+</div>
 
-                                <img
-                                    src="images/IMG_1168.jpeg"
-                                    class="company-logo"
-                                    alt="Razorpay"
-                                >
+</div>
 
-                                <div>
+</div>
 
-                                    <div class="company-name">
-                                        Razorpay
-                                    </div>
 
-                                    <div class="job-title">
-                                        Analyst — Banking Alliances
-                                    </div>
 
-                                </div>
+<!-- BIGBASKET -->
 
-                            </div>
+<div class="journey-item">
 
+<div class="journey-dot"></div>
 
-                            <div class="experience-date">
-                                Jun 2018 – Jan 2020
-                            </div>
+<div class="journey-card">
 
-                        </div>
+<div class="journey-top">
 
+<div class="company-row">
 
-                        <ul class="experience-points">
+<div class="company-logo-box">
 
-                            <li>
-                                Facilitated and forged relationships
-                                with banking partners. Key clients
-                                included Google Pay, PhonePe, Amazon Pay,
-                                Ola, Airtel, BOB, Zest Money, Flexmoney,
-                                Mobikwik and Freecharge.
-                            </li>
+<img
+src="images/IMG_1171.png"
+alt="BigBasket"
+class="company-logo">
 
+</div>
 
-                            <li>
-                                Handled pricing negotiations to maximize
-                                profits by reducing bank buy rates for
-                                merchants including Indigo, MTNL, Karvy
-                                and CRED.
-                            </li>
 
-                        </ul>
+<div>
 
-                    </div>
+<div class="role">
+Associate Product Manager
+</div>
 
+<div class="company">
+BigBasket
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
 
+<div class="date">
+Dec 2021 — Mar 2023
+</div>
 
+</div>
 
-        <!-- =====================================================
-             PROJECTS
-        ===================================================== -->
 
-        <section id="projects">
+<div class="experience-bullets">
 
-            <div class="container">
+<p>
 
-                <div class="section-header">
+Collaborated with <strong>Juspay and BNPL companies</strong>
+to devise strategies for customer acquisition and engagement
+and integrated <strong>Simpl, Paytm Postpaid, LazyPay and TATA
+BNPL</strong>, contributing to <strong>₹28 crores of sales per
+month</strong>.
 
-                    <span class="section-label">
-                        Side Project
-                    </span>
+</p>
 
-                    <h2 class="section-title">
-                        Building beyond work.
-                    </h2>
 
-                </div>
+<p>
 
+Owned payments success-rate monitoring across all payment
+modes for BigBasket's stack, maintaining success rates above
+<strong>85%</strong> across UPI, cards, netbanking, wallets
+and BNPL instruments.
 
-                <div class="glass-card project-card">
+</p>
 
-                    <span class="project-tag">
-                        Product · FinTech · Affiliate
-                    </span>
 
+<p>
 
-                    <h3 class="project-title">
-                        CashRabbit
-                    </h3>
+Led deep-dive <strong>RCA</strong> whenever success rates
+dropped below threshold, diagnosing failure patterns across
+payment modes and coordinating with Juspay and PG partners
+to drive resolution, reduce recovery time and protect GMV.
 
+</p>
 
-                    <p class="project-description">
+</div>
 
-                        CashRabbit is a cashback and affiliate rewards
-                        platform designed to sit between consumer
-                        purchase intent and brand marketing budgets.
-                        It enables shoppers to receive a share of the
-                        commissions brands already pay for
-                        performance marketing.
 
-                    </p>
+<div class="journey-impact">
 
+<span class="impact-tag">₹28 Cr Monthly Sales</span>
 
-                    <div class="project-points">
+<span class="impact-tag">85%+ Success Rate</span>
 
-                        <div class="project-point">
+<span class="impact-tag">BNPL</span>
 
-                            <strong>
-                                Consumer value
-                            </strong>
+<span class="impact-tag">Juspay</span>
 
-                            <span>
-                                Cashback and rewards on eligible
-                                purchases.
-                            </span>
+<span class="impact-tag">RCA</span>
 
-                        </div>
+<span class="impact-tag">GMV</span>
 
+</div>
 
-                        <div class="project-point">
+</div>
 
-                            <strong>
-                                Merchant value
-                            </strong>
+</div>
 
-                            <span>
-                                Performance-driven customer
-                                acquisition.
-                            </span>
 
-                        </div>
 
+<!-- SETU -->
 
-                        <div class="project-point">
+<div class="journey-item">
 
-                            <strong>
-                                Product focus
-                            </strong>
+<div class="journey-dot"></div>
 
-                            <span>
-                                Connecting purchase intent,
-                                affiliate commerce and rewards.
-                            </span>
+<div class="journey-card">
 
-                        </div>
+<div class="journey-top">
 
-                    </div>
+<div class="company-row">
 
-                </div>
+<div class="company-logo-box">
 
-            </div>
+<img
+src="images/IMG_1170.png"
+alt="Setu"
+class="company-logo">
 
-        </section>
+</div>
 
 
+<div>
 
-        <!-- =====================================================
-             SKILLS
-        ===================================================== -->
+<div class="role">
+Assistant Manager — Key Accounts
+</div>
 
-        <section id="skills">
+<div class="company">
+Setu.co
+</div>
 
-            <div class="container">
+</div>
 
-                <div class="section-header">
+</div>
 
-                    <span class="section-label">
-                        Skills
-                    </span>
 
-                    <h2 class="section-title">
-                        My product toolkit.
-                    </h2>
+<div class="date">
+Mar 2021 — Nov 2021
+</div>
 
-                </div>
+</div>
 
 
-                <div class="skills-wrapper">
+<div class="experience-bullets">
 
-                    <span class="skill">
-                        Product Strategy
-                    </span>
+<p>
 
-                    <span class="skill">
-                        Product Roadmap
-                    </span>
+Responsible for relationship management of Key Billers
+including <strong>IIFL Finance, DMI Finance, Ujjivan Bank,
+AU Bank, ZestMoney and MoneyTap</strong>.
 
-                    <span class="skill">
-                        0→1 Product Building
-                    </span>
+</p>
 
-                    <span class="skill">
-                        Feature Prioritization
-                    </span>
 
-                    <span class="skill">
-                        Product Discovery
-                    </span>
+<p>
 
-                    <span class="skill">
-                        Stakeholder Management
-                    </span>
+Received the <strong>Recognition Award</strong> for exemplary
+client engagement, impactful product presentations and driving
+<strong>3X portfolio growth within two quarters</strong>
+through strategic sales initiatives.
 
-                    <span class="skill">
-                        Payments
-                    </span>
+</p>
 
-                    <span class="skill">
-                        FinTech
-                    </span>
+</div>
 
-                    <span class="skill">
-                        Payment Gateways
-                    </span>
 
-                    <span class="skill">
-                        Payment Orchestration
-                    </span>
+<div class="journey-impact">
 
-                    <span class="skill">
-                        Domain-Driven Design
-                    </span>
+<span class="impact-tag">Key Accounts</span>
 
-                    <span class="skill">
-                        Platform Product Management
-                    </span>
+<span class="impact-tag">IIFL Finance</span>
 
-                    <span class="skill">
-                        JIRA
-                    </span>
+<span class="impact-tag">DMI Finance</span>
 
-                    <span class="skill">
-                        Confluence
-                    </span>
+<span class="impact-tag">Ujjivan Bank</span>
 
-                    <span class="skill">
-                        Figma
-                    </span>
+<span class="impact-tag">AU Bank</span>
 
-                    <span class="skill">
-                        AI Product Management
-                    </span>
+<span class="impact-tag">ZestMoney</span>
 
-                </div>
+<span class="impact-tag">MoneyTap</span>
 
-            </div>
+<span class="impact-tag">3X Growth</span>
 
-        </section>
+</div>
 
+</div>
 
+</div>
 
-        <!-- =====================================================
-             CERTIFICATIONS
-        ===================================================== -->
 
-        <section>
 
-            <div class="container">
+<!-- CASHFREE -->
 
-                <div class="section-header">
+<div class="journey-item">
 
-                    <span class="section-label">
-                        Certifications
-                    </span>
+<div class="journey-dot"></div>
 
-                    <h2 class="section-title">
-                        Continuous learning.
-                    </h2>
+<div class="journey-card">
 
-                </div>
+<div class="journey-top">
 
+<div class="company-row">
 
-                <div class="cert-grid">
+<div class="company-logo-box">
 
+<img
+src="images/IMG_1169.png"
+alt="CashFree Payments"
+class="company-logo">
 
-                    <div class="glass-card cert-card">
+</div>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
 
-                        <div class="cert-name">
-                            Aha! Product Management Professional Certificate
-                        </div>
+<div>
 
-                    </div>
+<div class="role">
+Assistant Manager — Key Accounts
+</div>
 
+<div class="company">
+CashFree Payments India Pvt. Ltd.
+</div>
 
-                    <div class="glass-card cert-card">
+</div>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+</div>
 
-                        <div class="cert-name">
-                            Product Management First Steps
-                        </div>
 
-                    </div>
+<div class="date">
+Jan 2020 — Mar 2021
+</div>
 
+</div>
 
-                    <div class="glass-card cert-card">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<div class="experience-bullets">
 
-                        <div class="cert-name">
-                            Product Management: Building a Product Strategy
-                        </div>
+<p>
 
-                    </div>
+Awarded the <strong>GEM (Going the Extra Mile) Award</strong>
+for effectively managing relationships with key clients.
 
+</p>
 
-                    <div class="glass-card cert-card">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<p>
 
-                        <div class="cert-name">
-                            Technical Product Management
-                        </div>
+<strong>MPL Gaming grew 8.66X transfers on Payouts during
+Q2</strong> while <strong>RummyCulture grew 6X on the PG
+front</strong>.
 
-                    </div>
+</p>
 
 
-                    <div class="glass-card cert-card">
+<p>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+Focused on <strong>incremental GMV</strong> within the existing
+portfolio through product fitment, <strong>cross-sell and
+upsell</strong>.
 
-                        <div class="cert-name">
-                            Product Management: Building a Product Roadmap
-                        </div>
+</p>
 
-                    </div>
 
+<p>
 
-                    <div class="glass-card cert-card">
+Managed relationships with clients including
+<strong>CITIBank, AU Small Finance Bank, CSB Bank, Dunzo,
+RummyCulture, DLocal, MPL Gaming, BigBasket and CRED</strong>.
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+</p>
 
-                        <div class="cert-name">
-                            Product Management: Customer Development
-                        </div>
+</div>
 
-                    </div>
 
+<div class="journey-impact">
 
-                    <div class="glass-card cert-card">
+<span class="impact-tag">GEM Award</span>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<span class="impact-tag">8.66X Payout Growth</span>
 
-                        <div class="cert-name">
-                            Integrating GenAI into Business Strategy
-                        </div>
+<span class="impact-tag">6X PG Growth</span>
 
-                    </div>
+<span class="impact-tag">Incremental GMV</span>
 
+<span class="impact-tag">Cross Sell</span>
 
-                    <div class="glass-card cert-card">
+<span class="impact-tag">Upsell</span>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+</div>
 
-                        <div class="cert-name">
-                            Generative AI for Product Managers
-                        </div>
+</div>
 
-                    </div>
+</div>
 
 
-                    <div class="glass-card cert-card">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<!-- RAZORPAY -->
 
-                        <div class="cert-name">
-                            Becoming an AI-First Product Leader
-                        </div>
+<div class="journey-item">
 
-                    </div>
+<div class="journey-dot"></div>
 
+<div class="journey-card">
 
-                    <div class="glass-card cert-card">
+<div class="journey-top">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<div class="company-row">
 
-                        <div class="cert-name">
-                            Artificial Intelligence Foundations: Machine Learning
-                        </div>
+<div class="company-logo-box">
 
-                    </div>
+<img
+src="images/IMG_1168.jpeg"
+alt="Razorpay"
+class="company-logo">
 
+</div>
 
-                    <div class="glass-card cert-card">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<div>
 
-                        <div class="cert-name">
-                            Introduction to Artificial Intelligence
-                        </div>
+<div class="role">
+Analyst — Banking Alliances
+</div>
 
-                    </div>
+<div class="company">
+Razorpay Software Pvt. Ltd.
+</div>
 
+</div>
 
-                    <div class="glass-card cert-card">
+</div>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
 
-                        <div class="cert-name">
-                            What Is Generative AI?
-                        </div>
+<div class="date">
+Jun 2018 — Jan 2020
+</div>
 
-                    </div>
+</div>
 
 
-                    <div class="glass-card cert-card">
+<div class="experience-bullets">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<p>
 
-                        <div class="cert-name">
-                            Your Top AI Questions Answered: AI Literacy for Everyone
-                        </div>
+Facilitated and forged relationships with banking partners.
+Key clients included <strong>Google Pay, PhonePe, Amazon Pay,
+Ola, Airtel, BOB, Zest Money, Flexmoney, Mobikwik and
+Freecharge</strong>.
 
-                    </div>
+</p>
 
 
-                    <div class="glass-card cert-card">
+<p>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+Handled <strong>pricing negotiations</strong> to maximize
+profits by reducing bank buy rates for merchants including
+<strong>Indigo, MTNL, Karvy and CRED</strong>.
 
-                        <div class="cert-name">
-                            Learning Microsoft 365 Copilot for Work
-                        </div>
+</p>
 
-                    </div>
+</div>
 
 
-                    <div class="glass-card cert-card">
+<div class="journey-impact">
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<span class="impact-tag">Banking Alliances</span>
 
-                        <div class="cert-name">
-                            Ethics in the Age of Generative AI
-                        </div>
+<span class="impact-tag">Google Pay</span>
 
-                    </div>
+<span class="impact-tag">PhonePe</span>
 
+<span class="impact-tag">Amazon Pay</span>
 
-                    <div class="glass-card cert-card">
+<span class="impact-tag">Airtel</span>
 
-                        <div class="cert-icon">
-                            ✓
-                        </div>
+<span class="impact-tag">Pricing Negotiation</span>
 
-                        <div class="cert-name">
-                            SEO Foundations
-                        </div>
+<span class="impact-tag">Bank Buy Rates</span>
 
-                    </div>
+</div>
 
+</div>
 
-                </div>
+</div>
 
-            </div>
 
-        </section>
+</div>
 
+</div>
 
+</section>
 
-        <!-- =====================================================
-             EDUCATION
-        ===================================================== -->
 
-        <section>
 
-            <div class="container">
+<!-- =========================================================
+     CASHRABBIT
+========================================================= -->
 
-                <div class="section-header">
+<section id="projects">
 
-                    <span class="section-label">
-                        Education
-                    </span>
+<div class="container">
 
-                    <h2 class="section-title">
-                        Where it started.
-                    </h2>
+<div class="section-kicker">
+SIDE PROJECT
+</div>
 
-                </div>
 
+<h2 class="section-title">
+Building CashRabbit.
+</h2>
 
-                <div class="education-grid">
 
+<div class="project-card">
 
-                    <div class="glass-card education-card">
+<div class="project-header">
 
-                        <div class="education-degree">
-                            Bachelor of Technology, Engineering
-                        </div>
+<div>
 
-                        <div class="education-school">
-                            PES University
-                        </div>
+<div class="project-title">
+CashRabbit.in
+</div>
 
-                        <div class="education-meta">
+<div class="project-role">
+Product Lead
+</div>
 
-                            <span>
-                                2014 – 2018
-                            </span>
+</div>
 
-                            <span>
-                                7.75 CGPA / 10
-                            </span>
 
-                            <span>
-                                4 Distinction Awards
-                            </span>
+<div class="project-badge">
+Independent Project
+</div>
 
-                        </div>
+</div>
 
-                    </div>
 
+<p class="project-description">
 
-                    <div class="glass-card education-card">
+Designing an AI-native cashback and affiliate rewards platform
+for Indian online shoppers, with end-to-end product ownership
+across web, mobile web and app.
 
-                        <div class="education-degree">
-                            Higher Secondary in Science
-                        </div>
+</p>
 
-                        <div class="education-school">
-                            Kalyani Central Model School
-                        </div>
 
-                        <div class="education-meta">
+<p
+class="project-description"
+style="margin-top:18px;">
 
-                            <span>
-                                2012 – 2014
-                            </span>
+Building with AI tools and applying product thinking to a
+two-sided marketplace solving consumer value capture and
+brand customer-acquisition efficiency.
 
-                            <span>
-                                75%
-                            </span>
+</p>
 
-                        </div>
 
-                    </div>
+<div class="project-note">
 
+Currently working across product strategy, website experience,
+merchant/store experience and the broader platform architecture.
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</section>
 
 
-        <!-- =====================================================
-             CONTACT
-        ===================================================== -->
 
-        <section id="contact">
+<!-- =========================================================
+     SKILLS
+========================================================= -->
 
-            <div class="container">
+<section id="skills">
 
-                <div class="glass-card contact-card">
+<div class="container">
 
-                    <h2 class="contact-title">
-                        Let's build something.
-                    </h2>
+<div class="section-kicker">
+CAPABILITIES
+</div>
 
 
-                    <p class="contact-description">
+<h2 class="section-title">
+Skills
+</h2>
 
-                        Whether you're looking to discuss product,
-                        payments, fintech or an interesting problem,
-                        I'd love to connect.
 
-                    </p>
+<p class="section-description">
 
+Core product, strategy, research and execution capabilities.
 
-                    <div class="contact-buttons">
+</p>
 
-                        <a
-                            href="https://www.linkedin.com/in/sidharthgupta962"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-primary"
-                        >
-                            Connect on LinkedIn ↗
-                        </a>
 
+<div class="skills-grid">
 
-                        <a
-                            href="tel:+919831781326"
-                            class="btn btn-secondary"
-                        >
-                            +91 98317 81326
-                        </a>
+<div class="skill">
+Product Strategy
+</div>
 
-                    </div>
+<div class="skill">
+Product Roadmap
+</div>
 
-                </div>
+<div class="skill">
+0→1 Product Building
+</div>
 
-            </div>
+<div class="skill">
+Feature Prioritization
+</div>
 
-        </section>
+<div class="skill">
+Product Discovery
+</div>
 
+<div class="skill">
+Stakeholder Management
+</div>
 
-    </main>
+<div class="skill">
+Payments
+</div>
 
+<div class="skill">
+FinTech
+</div>
 
+<div class="skill">
+Payment Gateways
+</div>
 
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
+<div class="skill">
+Payment Orchestration
+</div>
 
-    <footer>
+<div class="skill">
+Domain-Driven Design
+</div>
 
-        © 2026 Sidharth Gupta · Product Manager
+<div class="skill">
+Platform Product Management
+</div>
 
-    </footer>
+<div class="skill">
+JIRA
+</div>
+
+<div class="skill">
+Confluence
+</div>
+
+<div class="skill">
+Figma
+</div>
+
+<div class="skill">
+AI Product Management
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+
+<section id="certifications">
+
+<div class="container">
+
+<div class="section-kicker">
+CERTIFICATIONS
+</div>
+
+
+<h2 class="section-title">
+Learning & Certifications
+</h2>
+
+
+<p class="section-description">
+
+Professional development across Product Management,
+Artificial Intelligence, Generative AI and SEO.
+
+</p>
+
+
+<div class="cert-grid">
+
+<div class="cert">
+Aha! Product Management Professional Certificate
+</div>
+
+<div class="cert">
+Product Management First Steps
+</div>
+
+<div class="cert">
+Product Management: Building a Product Strategy
+</div>
+
+<div class="cert">
+Technical Product Management
+</div>
+
+<div class="cert">
+Product Management: Building a Product Roadmap
+</div>
+
+<div class="cert">
+Product Management: Customer Development
+</div>
+
+<div class="cert">
+Integrating GenAI into Business Strategy
+</div>
+
+<div class="cert">
+Generative AI for Product Managers
+</div>
+
+<div class="cert">
+Becoming an AI-First Product Leader
+</div>
+
+<div class="cert">
+Artificial Intelligence Foundations: Machine Learning
+</div>
+
+<div class="cert">
+Introduction to Artificial Intelligence
+</div>
+
+<div class="cert">
+What Is Generative AI?
+</div>
+
+<div class="cert">
+Your Top AI Questions Answered: AI Literacy for Everyone
+</div>
+
+<div class="cert">
+Learning Microsoft 365 Copilot for Work
+</div>
+
+<div class="cert">
+Ethics in the Age of Generative AI
+</div>
+
+<div class="cert">
+SEO Foundations
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-kicker">
+EDUCATION
+</div>
+
+
+<h2 class="section-title">
+Education
+</h2>
+
+
+<div class="education-grid">
+
+
+<div class="education-card">
+
+<div class="education-year">
+2014 — 2018
+</div>
+
+
+<h3>
+Bachelor of Technology, Engineering
+</h3>
+
+
+<p>
+PES University
+</p>
+
+
+<p style="margin-top:12px;">
+
+7.75 CGPA on a scale of 10 and secured
+4 Distinction Awards during the course.
+
+</p>
+
+</div>
+
+
+
+<div class="education-card">
+
+<div class="education-year">
+2012 — 2014
+</div>
+
+
+<h3>
+Higher Secondary in Science
+</h3>
+
+
+<p>
+Kalyani Central Model School
+</p>
+
+
+<p style="margin-top:12px;">
+
+Scored 75% in Higher Secondary.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-kicker">
+GET IN TOUCH
+</div>
+
+
+<h2 class="section-title">
+Let's connect.
+</h2>
+
+
+<p class="section-description">
+
+Building something interesting in Payments, FinTech or
+Product? I'd be happy to connect.
+
+</p>
+
+
+<div class="contact-card">
+
+<div class="contact-grid">
+
+
+<div class="contact-item">
+
+<div class="contact-label">
+Phone
+</div>
+
+
+<div class="contact-value">
+
+<a href="tel:+919831781326">
++91-9831781326
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<div class="contact-label">
+Email
+</div>
+
+
+<div class="contact-value">
+
+<a href="mailto:sidharthgupta962@gmail.com">
+sidharthgupta962@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<div class="contact-label">
+LinkedIn
+</div>
+
+
+<div class="contact-value">
+
+<a
+href="https://www.linkedin.com/in/sidharthgupta962"
+target="_blank">
+
+linkedin.com/in/sidharthgupta962
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+© 2026 Sidharth Gupta
+</div>
+
+<div>
+Product Manager · Payments · FinTech
+</div>
+
+</div>
+
+</footer>
 
 
 </body>
+
 </html>
