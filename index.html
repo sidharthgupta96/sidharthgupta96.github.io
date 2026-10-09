@@ -696,17 +696,30 @@ section {
 }
 
 .cert {
+    display: block;
     padding: 18px;
     background: #101010;
     border: 1px solid #242424;
     color: #8f8f96;
     font-size: 13px;
-    transition: 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+    cursor: pointer;
 }
 
 .cert:hover {
     border-color: #404040;
     color: #ffffff;
+    background: #141414;
+    transform: translateY(-2px);
+}
+
+.cert:focus-visible {
+    outline: 2px solid #6ea8ff;
+    outline-offset: 3px;
 }
 
 
@@ -1981,22 +1994,117 @@ Artificial Intelligence, Generative AI and SEO.
 
 <div class="cert-grid">
 
-<div class="cert">Aha! Product Management Professional Certificate</div>
-<div class="cert">Product Management First Steps</div>
-<div class="cert">Product Management: Building a Product Strategy</div>
-<div class="cert">Technical Product Management</div>
-<div class="cert">Product Management: Building a Product Roadmap</div>
-<div class="cert">Product Management: Customer Development</div>
-<div class="cert">Integrating GenAI into Business Strategy</div>
-<div class="cert">Generative AI for Product Managers</div>
-<div class="cert">Becoming an AI-First Product Leader</div>
-<div class="cert">Artificial Intelligence Foundations: Machine Learning</div>
-<div class="cert">Introduction to Artificial Intelligence</div>
-<div class="cert">What Is Generative AI?</div>
-<div class="cert">Your Top AI Questions Answered: AI Literacy for Everyone</div>
-<div class="cert">Learning Microsoft 365 Copilot for Work</div>
-<div class="cert">Ethics in the Age of Artificial Intelligence</div>
-<div class="cert">SEO Foundations</div>
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/6ba7e94ab6709b311b07a82590a14b227486189a6a67f0ecd5dac33352fc4841"
+target="_blank"
+rel="noopener noreferrer">
+Aha! Product Management Professional Certificate
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/0d3bf0d63c3fa580de0c8604201ab532b68317b23d3411931a0f5291cdfda2ca"
+target="_blank"
+rel="noopener noreferrer">
+Product Management First Steps
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/4816c3b90b53d11c09b128aa4ceb99c3a8291de0d531ca16887efcb18c5ad1a0"
+target="_blank"
+rel="noopener noreferrer">
+Product Management: Building a Product Strategy
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/c1727bb96138c846a2da0ba291db60d6c4f034913188bfde37bd230f5df58c79"
+target="_blank"
+rel="noopener noreferrer">
+Technical Product Management
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/a09bb77c7b0143088242fa384c39c2e49ecf7547042ccf279a3fde81d8d30abe"
+target="_blank"
+rel="noopener noreferrer">
+Product Management: Building a Product Roadmap
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/2e415b9c58bcb6afef5453919ace7ed0e0d075b40f913d7a0f556ac3b57be266"
+target="_blank"
+rel="noopener noreferrer">
+Product Management: Customer Development
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/5de7cc0a93942f3357d335000b915331552de152466b783ff935ab04cb171e76"
+target="_blank"
+rel="noopener noreferrer">
+Integrating GenAI into Business Strategy
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/d8d4c2f30055c67a69bdfbc01a17d73c5fdf6dd7b0daf0a9577f035814a629c1"
+target="_blank"
+rel="noopener noreferrer">
+Generative AI for Product Managers
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/00b8d3b267efcba8fa7c5169ca264d63f045b056f8ac1f3aecd90d1e7838f488"
+target="_blank"
+rel="noopener noreferrer">
+Becoming an AI-First Product Leader
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/aa455104b49bfb43473f5f085ac53ba520a296534cc66b27482a0539bc529c5c"
+target="_blank"
+rel="noopener noreferrer">
+Artificial Intelligence Foundations: Machine Learning
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/791d69401a0423fb3997628f27ad4a99e7053828538b4d0a6508271f98297a06"
+target="_blank"
+rel="noopener noreferrer">
+Introduction to Artificial Intelligence
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/375e3c976e7320c9b1aea3be1a388041e70adb37bd5dc87dc2e2651eae47b40d?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B2O2XzLOgRnGCsHmJDE3LdA%3D%3D"
+target="_blank"
+rel="noopener noreferrer">
+What Is Generative AI?
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/a8184d5d0e9a19b4dd126ca4d5794741acb861449c8cdd9e52c8f42e261e06ea?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B2O2XzLOgRnGCsHmJDE3LdA%3D%3D"
+target="_blank"
+rel="noopener noreferrer">
+Your Top AI Questions Answered: AI Literacy for Everyone
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/6239134706a005b7e5a42b3ad7efa25e552a91eae8d3a12bc5810a4b8f5b13af?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B2O2XzLOgRnGCsHmJDE3LdA%3D%3D"
+target="_blank"
+rel="noopener noreferrer">
+Learning Microsoft 365 Copilot for Work
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/a3d006f6c707852aa922b773387913373b077ac7cfc5f1e332c85e8330cffe1a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B2O2XzLOgRnGCsHmJDE3LdA%3D%3D"
+target="_blank"
+rel="noopener noreferrer">
+Ethics in the Age of Artificial Intelligence
+</a>
+
+<a class="cert"
+href="https://www.linkedin.com/learning/certificates/09be63db221f9f9fac963739fe19484e7e9117724eeaf03ed46fe2d44eb7f147"
+target="_blank"
+rel="noopener noreferrer">
+SEO Foundations
+</a>
 
 </div>
 
