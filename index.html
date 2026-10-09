@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,27 +65,22 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-
     height: 92px;
-
     z-index: 1000;
-
     display: flex;
     align-items: center;
 
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.88),
-            rgba(0,0,0,0)
-        );
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.88),
+        rgba(0,0,0,0)
+    );
 }
 
 .nav-inner {
     width: 92%;
     max-width: 1450px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,16 +89,12 @@ nav {
 .logo {
     width: 48px;
     height: 48px;
-
     border-radius: 50%;
-
     background: #ffffff;
     color: #080808;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 18px;
     font-weight: 900;
     letter-spacing: -1px;
@@ -119,9 +109,7 @@ nav {
 .nav-links a {
     font-size: 17px;
     font-weight: 600;
-
     color: rgba(255,255,255,0.58);
-
     transition: 0.25s ease;
 }
 
@@ -141,22 +129,18 @@ nav {
 .hero {
     height: 100vh;
     min-height: 700px;
-
     position: relative;
     overflow: hidden;
-
     display: flex;
     align-items: center;
 }
 
 .hero::before {
     content: "";
-
     position: absolute;
     inset: 0;
 
     background-image:
-
         linear-gradient(
             90deg,
             rgba(0,0,0,0.80) 0%,
@@ -164,76 +148,58 @@ nav {
             rgba(0,0,0,0.20) 75%,
             rgba(0,0,0,0.35) 100%
         ),
-
         linear-gradient(
             0deg,
             rgba(0,0,0,0.42),
             transparent 45%
         ),
-
         url("images/profile.PNG");
 
     background-size: cover;
     background-position: center;
-
     filter: grayscale(100%);
-
     transform: scale(1.01);
-
     z-index: 0;
 }
 
 .hero::after {
     content: "";
-
     position: absolute;
     inset: 0;
 
-    background:
-        radial-gradient(
-            circle at center,
-            transparent 35%,
-            rgba(0,0,0,0.20) 100%
-        );
+    background: radial-gradient(
+        circle at center,
+        transparent 35%,
+        rgba(0,0,0,0.20) 100%
+    );
 
     pointer-events: none;
-
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-
     width: 92%;
     max-width: 1450px;
-
     margin: auto;
-
     padding-top: 60px;
 }
 
 .hero-kicker {
     font-size: 14px;
     font-weight: 650;
-
     letter-spacing: 2.5px;
     text-transform: uppercase;
-
     margin-bottom: 25px;
-
     color: rgba(255,255,255,0.78);
 }
 
 .hero-title {
     font-size: clamp(52px, 6.7vw, 105px);
-
     line-height: 0.94;
-
     letter-spacing: -5px;
-
     font-weight: 800;
-
     max-width: 1100px;
 }
 
@@ -243,53 +209,63 @@ nav {
 
 .hero-subtitle {
     margin-top: 32px;
-
     max-width: 680px;
-
     font-size: 17px;
-
     line-height: 1.7;
-
     color: rgba(255,255,255,0.70);
 }
 
 .hero-actions {
     display: flex;
     gap: 12px;
-
     margin-top: 32px;
-
     flex-wrap: wrap;
 }
 
 .hero-btn {
-    padding: 12px 20px;
-
-    border: 1px solid rgba(255,255,255,0.38);
-
-    background: rgba(0,0,0,0.24);
-
-    backdrop-filter: blur(8px);
-
-    border-radius: 4px;
-
+    padding: 12px 22px;
+    border: 1px solid rgba(255,255,255,0.30);
+    background: rgba(255,255,255,0.09);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    border-radius: 999px;
     font-size: 13px;
     font-weight: 650;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 
-    transition: 0.25s ease;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.16),
+        0 4px 18px rgba(0,0,0,0.12);
 }
 
 .hero-btn:hover {
-    background: #ffffff;
-    color: #080808;
+    background: rgba(255,255,255,0.20);
+    border-color: rgba(255,255,255,0.65);
+    color: #ffffff;
+    transform: translateY(-2px);
 
-    border-color: #ffffff;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.24),
+        0 8px 24px rgba(0,0,0,0.22);
 }
 
 .hero-btn-primary {
+    background: rgba(255,255,255,0.92);
+    color: #080808;
+    border-color: rgba(255,255,255,0.95);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.65),
+        0 4px 20px rgba(255,255,255,0.08);
+}
+
+.hero-btn-primary:hover {
     background: #ffffff;
     color: #080808;
-
     border-color: #ffffff;
 }
 
@@ -300,30 +276,20 @@ nav {
 
 .scroll-indicator {
     position: absolute;
-
     right: 0;
     top: 50%;
-
     transform: translateY(-50%);
-
     z-index: 5;
-
     width: 48px;
     height: 105px;
-
     background: rgba(255,255,255,0.10);
-
     border-radius: 10px 0 0 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     writing-mode: vertical-rl;
-
     font-size: 11px;
     letter-spacing: 2px;
-
     color: rgba(255,255,255,0.70);
 }
 
@@ -334,42 +300,30 @@ nav {
 
 section {
     padding: 120px 0;
-
     background: #080808;
-
     border-top: 1px solid #1b1b1b;
 }
 
 .section-kicker {
     font-size: 11px;
-
     letter-spacing: 3px;
     text-transform: uppercase;
-
     color: #6ea8ff;
-
     margin-bottom: 14px;
 }
 
 .section-title {
     font-size: clamp(38px, 5vw, 66px);
-
     line-height: 1;
-
     letter-spacing: -3px;
-
     margin-bottom: 25px;
 }
 
 .section-description {
     color: #8e8e95;
-
     max-width: 760px;
-
     font-size: 16px;
-
     line-height: 1.8;
-
     margin-bottom: 55px;
 }
 
@@ -385,41 +339,58 @@ section {
 
 .profile-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
-    gap: 1px;
-
-    background: #252525;
-
-    border: 1px solid #252525;
+    gap: 14px;
+    background: transparent;
+    border: none;
 }
 
 .profile-card {
-    background: #0d0d0d;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.085),
+        rgba(255,255,255,0.025)
+    );
 
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 22px;
     padding: 30px;
-
     min-height: 160px;
+
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.09),
+        0 8px 28px rgba(0,0,0,0.15);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.26);
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.12),
+        rgba(255,255,255,0.035)
+    );
 }
 
 .profile-number {
     font-size: 36px;
-
     font-weight: 800;
-
     letter-spacing: -2px;
-
     color: #ffffff;
-
     margin-bottom: 8px;
 }
 
 .profile-label {
-    color: #77777f;
-
+    color: #9999a1;
     font-size: 12px;
-
     line-height: 1.6;
 }
 
@@ -435,59 +406,44 @@ section {
 
 .about-main p {
     font-size: 21px;
-
     line-height: 1.8;
-
     color: #b6b6bd;
-
     margin-bottom: 25px;
 }
 
 .about-highlight {
     margin-top: 60px;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 14px;
 }
 
 .about-card {
     padding: 28px;
-
     border: 1px solid #242424;
-
     background: #101010;
-
     transition: 0.25s ease;
 }
 
 .about-card:hover {
     border-color: #414141;
-
     transform: translateY(-2px);
 }
 
 .about-card-icon {
     font-size: 18px;
-
     margin-bottom: 18px;
-
     color: #6ea8ff;
 }
 
 .about-card h3 {
     font-size: 18px;
-
     margin-bottom: 10px;
 }
 
 .about-card p {
     font-size: 13px;
-
     line-height: 1.7;
-
     color: #77777f;
 }
 
@@ -502,51 +458,35 @@ section {
 
 .journey::before {
     content: "";
-
     position: absolute;
-
     left: 9px;
-
     top: 10px;
-
     bottom: 10px;
-
     width: 1px;
-
     background: #303030;
 }
 
 .journey-item {
     position: relative;
-
     padding-left: 45px;
-
     margin-bottom: 30px;
 }
 
 .journey-dot {
     position: absolute;
-
     left: 2px;
     top: 25px;
-
     width: 15px;
     height: 15px;
-
     border-radius: 50%;
-
     background: #6ea8ff;
-
     border: 4px solid #080808;
 }
 
 .journey-card {
     background: #101010;
-
     border: 1px solid #242424;
-
     padding: 30px;
-
     transition: 0.25s ease;
 }
 
@@ -556,86 +496,63 @@ section {
 
 .journey-top {
     display: flex;
-
     justify-content: space-between;
-
     gap: 25px;
-
     margin-bottom: 27px;
 }
 
 .company-row {
     display: flex;
-
     align-items: center;
-
     gap: 17px;
 }
 
 .company-logo-box {
     width: 88px;
     height: 64px;
-
     background: #ffffff;
-
     border-radius: 7px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     padding: 7px;
-
     flex-shrink: 0;
-
     overflow: hidden;
 }
 
 .company-logo {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
 }
 
 .role {
     font-size: 21px;
-
     font-weight: 750;
-
     line-height: 1.25;
 }
 
 .company {
     margin-top: 4px;
-
     color: #85858c;
-
     font-size: 13px;
 }
 
 .date {
     color: #66666d;
-
     font-size: 12px;
-
     white-space: nowrap;
 }
 
 .experience-bullets {
     display: flex;
-
     flex-direction: column;
-
     gap: 16px;
 }
 
 .experience-bullets p {
     color: #9999a1;
-
     font-size: 14px;
-
     line-height: 1.8;
 }
 
@@ -645,23 +562,16 @@ section {
 
 .journey-impact {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 7px;
-
     margin-top: 25px;
 }
 
 .impact-tag {
     padding: 5px 9px;
-
     border: 1px solid #303030;
-
     background: #151515;
-
     color: #77777f;
-
     font-size: 10px;
 }
 
@@ -672,11 +582,8 @@ section {
 
 .project-card {
     border: 1px solid #292929;
-
     background: #101010;
-
     padding: 38px;
-
     transition: 0.25s ease;
 }
 
@@ -686,95 +593,95 @@ section {
 
 .project-header {
     display: flex;
-
     justify-content: space-between;
-
     gap: 20px;
-
     margin-bottom: 25px;
 }
 
 .project-title {
     font-size: 32px;
-
     letter-spacing: -1px;
 }
 
 .project-role {
     color: #77777f;
-
     font-size: 13px;
-
     margin-top: 4px;
 }
 
 .project-badge {
     border: 1px solid #353535;
-
     padding: 6px 10px;
-
     color: #77777f;
-
     font-size: 10px;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
 }
 
 .project-description {
     color: #9c9ca3;
-
     font-size: 15px;
-
     line-height: 1.85;
 }
 
 .project-note {
     margin-top: 25px;
-
     padding: 20px;
-
     background: #161616;
-
     border-left: 2px solid #6ea8ff;
-
     color: #77777f;
-
     font-size: 13px;
 }
 
 
 /* =========================
-   SKILLS
+   SKILLS — GLASS PILL CHIPS
 ========================= */
 
 .skills-grid {
     display: flex;
-
     flex-wrap: wrap;
-
-    gap: 8px;
+    gap: 10px;
 }
 
 .skill {
-    padding: 11px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    border: 1px solid #2b2b2b;
+    padding: 10px 17px;
 
-    background: #101010;
+    border: 1px solid rgba(255,255,255,0.13);
 
-    color: #9999a1;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.075),
+        rgba(255,255,255,0.025)
+    );
 
+    color: #b9b9c1;
     font-size: 12px;
+    border-radius: 999px;
 
-    transition: 0.2s ease;
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 3px 12px rgba(0,0,0,0.12);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .skill:hover {
-    border-color: #6ea8ff;
-
+    border-color: rgba(110,168,255,0.65);
+    background: rgba(110,168,255,0.12);
     color: #ffffff;
+    transform: translateY(-2px);
 }
 
 
@@ -784,29 +691,21 @@ section {
 
 .cert-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 8px;
 }
 
 .cert {
     padding: 18px;
-
     background: #101010;
-
     border: 1px solid #242424;
-
     color: #8f8f96;
-
     font-size: 13px;
-
     transition: 0.2s ease;
 }
 
 .cert:hover {
     border-color: #404040;
-
     color: #ffffff;
 }
 
@@ -817,91 +716,99 @@ section {
 
 .education-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 15px;
 }
 
 .education-card {
     padding: 30px;
-
     border: 1px solid #242424;
-
     background: #101010;
 }
 
 .education-year {
     color: #6ea8ff;
-
     font-size: 11px;
-
     letter-spacing: 1px;
-
     margin-bottom: 10px;
 }
 
 .education-card h3 {
     font-size: 19px;
-
     margin-bottom: 6px;
 }
 
 .education-card p {
     color: #77777f;
-
     font-size: 13px;
 }
 
 
 /* =========================
-   CONTACT
+   CONTACT — GLASS PILL LINKS
 ========================= */
 
 .contact-card {
     border: 1px solid #282828;
-
     background: #101010;
-
     padding: 35px;
+    border-radius: 24px;
 }
 
 .contact-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 10px;
+    gap: 12px;
 }
 
 .contact-item {
-    padding: 20px;
+    min-width: 0;
+    padding: 20px 22px;
 
-    border: 1px solid #292929;
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 999px;
 
-    transition: 0.2s ease;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.075),
+        rgba(255,255,255,0.025)
+    );
+
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 4px 14px rgba(0,0,0,0.12);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .contact-item:hover {
-    border-color: #414141;
+    border-color: rgba(255,255,255,0.30);
+    background: rgba(255,255,255,0.09);
+    transform: translateY(-2px);
 }
 
 .contact-label {
-    color: #606067;
-
+    color: #85858d;
     font-size: 10px;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
-
     margin-bottom: 7px;
 }
 
 .contact-value {
-    color: #d2d2d5;
-
+    color: #e0e0e5;
     font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-value a {
+    transition: color 0.2s ease;
 }
 
 .contact-value a:hover {
@@ -915,17 +822,13 @@ section {
 
 footer {
     border-top: 1px solid #202020;
-
     padding: 30px 0;
-
     color: #55555c;
-
     font-size: 11px;
 }
 
 .footer-inner {
     display: flex;
-
     justify-content: space-between;
 }
 
@@ -971,15 +874,12 @@ footer {
 
     .hero-title {
         font-size: clamp(47px, 11vw, 78px);
-
         letter-spacing: -4px;
-
         max-width: 650px;
     }
 
     .hero-subtitle {
         font-size: 15px;
-
         max-width: 500px;
     }
 
@@ -1021,7 +921,6 @@ footer {
 
     .footer-inner {
         flex-direction: column;
-
         gap: 8px;
     }
 }
@@ -1055,9 +954,7 @@ footer {
 
     .hero-title {
         font-size: 48px;
-
         letter-spacing: -3px;
-
         line-height: 0.96;
     }
 
@@ -1067,12 +964,22 @@ footer {
 
     .hero-actions {
         flex-direction: column;
-
         align-items: flex-start;
+    }
+
+    .hero-btn {
+        padding: 12px 22px;
     }
 
     .profile-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .profile-card {
+        min-height: auto;
+        padding: 25px;
+        border-radius: 20px;
     }
 
     .journey-item {
@@ -1085,7 +992,6 @@ footer {
 
     .company-logo-box {
         width: 75px;
-
         height: 57px;
     }
 
@@ -1100,6 +1006,24 @@ footer {
     .project-header {
         flex-direction: column;
     }
+
+    .contact-card {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .contact-grid {
+        gap: 12px;
+    }
+
+    .contact-item {
+        border-radius: 22px;
+        padding: 18px 20px;
+    }
+
+    .contact-value {
+        font-size: 12px;
+    }
 }
 
 
@@ -1111,6 +1035,14 @@ footer {
 
     html {
         scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 
 }
@@ -1170,31 +1102,22 @@ Contact
 <div class="hero-content">
 
 <div class="hero-kicker">
-
 Product Manager · Payments · FinTech
-
 </div>
 
 
 <h1 class="hero-title">
-
 Hi, I am Sidharth.<br>
-
 I build products.<br>
-
 Solve problems.<br>
-
 Move businesses forward.
-
 </h1>
 
 
 <p class="hero-subtitle">
-
 8+ years building payment products, platforms and
 customer experiences across FinTech, digital commerce
 and enterprise payments.
-
 </p>
 
 
@@ -1203,28 +1126,23 @@ and enterprise payments.
 <a
 href="#experience"
 class="hero-btn hero-btn-primary">
-
 Explore My Work
-
 </a>
 
 
 <a
 href="tel:+919831781326"
 class="hero-btn">
-
 📞 Call Me
-
 </a>
 
 
 <a
 href="https://www.linkedin.com/in/sidharthgupta962"
 target="_blank"
+rel="noopener noreferrer"
 class="hero-btn">
-
 LinkedIn
-
 </a>
 
 </div>
@@ -1233,9 +1151,7 @@ LinkedIn
 
 
 <div class="scroll-indicator">
-
 SCROLL
-
 </div>
 
 </header>
@@ -1265,9 +1181,7 @@ PLAYER PROFILE
 </div>
 
 <div class="profile-label">
-
 Years of experience in Payments & FinTech
-
 </div>
 
 </div>
@@ -1280,10 +1194,8 @@ Years of experience in Payments & FinTech
 </div>
 
 <div class="profile-label">
-
 Revenue-generating Ecentric enterprise payment gateway
 implementation
-
 </div>
 
 </div>
@@ -1296,9 +1208,7 @@ $5M
 </div>
 
 <div class="profile-label">
-
 Realized revenue through Blaze platform commercialization
-
 </div>
 
 </div>
@@ -1311,9 +1221,7 @@ $20M
 </div>
 
 <div class="profile-label">
-
 Projected revenue from Blaze platform
-
 </div>
 
 </div>
@@ -1341,10 +1249,8 @@ ABOUT ME
 
 
 <h2 class="section-title">
-
 Product thinking<br>
 meets payments.
-
 </h2>
 
 
@@ -1353,30 +1259,24 @@ meets payments.
 <div class="about-main">
 
 <p>
-
 As a Product Manager, I bring expertise in payments
 platforms and payment gateways, driving large-scale
 product migrations and launching innovative solutions.
-
 </p>
 
 
 <p>
-
 Skilled in Domain-Driven Design (DDD), product
 orchestration, and platform-first thinking.
-
 </p>
 
 
 <p>
-
 A strong collaborator, working closely with engineering,
 design, data, marketing, and customer success teams to
 combine technical depth, product vision, and communication
 skills in building customer-centric and revenue-generating
 solutions.
-
 </p>
 
 </div>
@@ -1396,10 +1296,8 @@ Payments & FinTech
 </h3>
 
 <p>
-
 Payment gateways, payment platforms, digital wallets,
 tokenisation, 3DS, BNPL and payment orchestration.
-
 </p>
 
 </div>
@@ -1416,10 +1314,8 @@ tokenisation, 3DS, BNPL and payment orchestration.
 </h3>
 
 <p>
-
 Product strategy, roadmap, requirements, engineering
 execution, launch and commercialisation.
-
 </p>
 
 </div>
@@ -1436,14 +1332,14 @@ Cross-functional Leadership
 </h3>
 
 <p>
-
 Engineering, design, data, marketing, customer success,
 banks and enterprise merchants.
-
 </p>
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -1472,11 +1368,9 @@ Experience
 
 
 <p class="section-description">
-
 8+ years across Payments and FinTech, working across
 payment gateways, payment platforms, banking alliances,
 key accounts, BNPL and enterprise payment infrastructure.
-
 </p>
 
 
@@ -1571,21 +1465,13 @@ Leveraged AI tools (<strong>ChatGPT, Claude and Copilot</strong>) to author user
 <div class="journey-impact">
 
 <span class="impact-tag">₹20 Cr Ecentric</span>
-
 <span class="impact-tag">Blaze</span>
-
 <span class="impact-tag">$5M Realized</span>
-
 <span class="impact-tag">$20M Projected</span>
-
 <span class="impact-tag">PayPath</span>
-
 <span class="impact-tag">3DS</span>
-
 <span class="impact-tag">Tokenisation</span>
-
 <span class="impact-tag">Apple Pay</span>
-
 <span class="impact-tag">Google Pay</span>
 
 </div>
@@ -1643,33 +1529,27 @@ Dec 2021 — Mar 2023
 <div class="experience-bullets">
 
 <p>
-
 Collaborated with <strong>Juspay and BNPL companies</strong>
 to devise strategies for customer acquisition and engagement
 and integrated <strong>Simpl, Paytm Postpaid, LazyPay and TATA
 BNPL</strong>, contributing to <strong>₹28 crores of sales per
 month</strong>.
-
 </p>
 
 
 <p>
-
 Owned payments success-rate monitoring across all payment
 modes for BigBasket's stack, maintaining success rates above
 <strong>85%</strong> across UPI, cards, netbanking, wallets
 and BNPL instruments.
-
 </p>
 
 
 <p>
-
 Led deep-dive <strong>RCA</strong> whenever success rates
 dropped below threshold, diagnosing failure patterns across
 payment modes and coordinating with Juspay and PG partners
 to drive resolution, reduce recovery time and protect GMV.
-
 </p>
 
 </div>
@@ -1678,15 +1558,10 @@ to drive resolution, reduce recovery time and protect GMV.
 <div class="journey-impact">
 
 <span class="impact-tag">₹28 Cr Monthly Sales</span>
-
 <span class="impact-tag">85%+ Success Rate</span>
-
 <span class="impact-tag">BNPL</span>
-
 <span class="impact-tag">Juspay</span>
-
 <span class="impact-tag">RCA</span>
-
 <span class="impact-tag">GMV</span>
 
 </div>
@@ -1744,21 +1619,17 @@ Mar 2021 — Nov 2021
 <div class="experience-bullets">
 
 <p>
-
 Responsible for relationship management of Key Billers
 including <strong>IIFL Finance, DMI Finance, Ujjivan Bank,
 AU Bank, ZestMoney and MoneyTap</strong>.
-
 </p>
 
 
 <p>
-
 Received the <strong>Recognition Award</strong> for exemplary
 client engagement, impactful product presentations and driving
 <strong>3X portfolio growth within two quarters</strong>
 through strategic sales initiatives.
-
 </p>
 
 </div>
@@ -1767,19 +1638,12 @@ through strategic sales initiatives.
 <div class="journey-impact">
 
 <span class="impact-tag">Key Accounts</span>
-
 <span class="impact-tag">IIFL Finance</span>
-
 <span class="impact-tag">DMI Finance</span>
-
 <span class="impact-tag">Ujjivan Bank</span>
-
 <span class="impact-tag">AU Bank</span>
-
 <span class="impact-tag">ZestMoney</span>
-
 <span class="impact-tag">MoneyTap</span>
-
 <span class="impact-tag">3X Growth</span>
 
 </div>
@@ -1837,37 +1701,29 @@ Jan 2020 — Mar 2021
 <div class="experience-bullets">
 
 <p>
-
 Awarded the <strong>GEM (Going the Extra Mile) Award</strong>
 for effectively managing relationships with key clients.
-
 </p>
 
 
 <p>
-
 <strong>MPL Gaming grew 8.66X transfers on Payouts during
 Q2</strong> while <strong>RummyCulture grew 6X on the PG
 front</strong>.
-
 </p>
 
 
 <p>
-
 Focused on <strong>incremental GMV</strong> within the existing
 portfolio through product fitment, <strong>cross-sell and
 upsell</strong>.
-
 </p>
 
 
 <p>
-
 Managed relationships with clients including
 <strong>CITIBank, AU Small Finance Bank, CSB Bank, Dunzo,
 RummyCulture, DLocal, MPL Gaming, BigBasket and CRED</strong>.
-
 </p>
 
 </div>
@@ -1876,15 +1732,10 @@ RummyCulture, DLocal, MPL Gaming, BigBasket and CRED</strong>.
 <div class="journey-impact">
 
 <span class="impact-tag">GEM Award</span>
-
 <span class="impact-tag">8.66X Payout Growth</span>
-
 <span class="impact-tag">6X PG Growth</span>
-
 <span class="impact-tag">Incremental GMV</span>
-
 <span class="impact-tag">Cross Sell</span>
-
 <span class="impact-tag">Upsell</span>
 
 </div>
@@ -1942,21 +1793,17 @@ Jun 2018 — Jan 2020
 <div class="experience-bullets">
 
 <p>
-
 Facilitated and forged relationships with banking partners.
 Key clients included <strong>Google Pay, PhonePe, Amazon Pay,
 Ola, Airtel, BOB, Zest Money, Flexmoney, Mobikwik and
 Freecharge</strong>.
-
 </p>
 
 
 <p>
-
 Handled <strong>pricing negotiations</strong> to maximize
 profits by reducing bank buy rates for merchants including
 <strong>Indigo, MTNL, Karvy and CRED</strong>.
-
 </p>
 
 </div>
@@ -1965,17 +1812,11 @@ profits by reducing bank buy rates for merchants including
 <div class="journey-impact">
 
 <span class="impact-tag">Banking Alliances</span>
-
 <span class="impact-tag">Google Pay</span>
-
 <span class="impact-tag">PhonePe</span>
-
 <span class="impact-tag">Amazon Pay</span>
-
 <span class="impact-tag">Airtel</span>
-
 <span class="impact-tag">Pricing Negotiation</span>
-
 <span class="impact-tag">Bank Buy Rates</span>
 
 </div>
@@ -2036,30 +1877,24 @@ Independent Project
 
 
 <p class="project-description">
-
 Designing an AI-native cashback and affiliate rewards platform
 for Indian online shoppers, with end-to-end product ownership
 across web, mobile web and app.
-
 </p>
 
 
 <p
 class="project-description"
 style="margin-top:18px;">
-
 Building with AI tools and applying product thinking to a
 two-sided marketplace solving consumer value capture and
 brand customer-acquisition efficiency.
-
 </p>
 
 
 <div class="project-note">
-
 Currently working across product strategy, website experience,
 merchant/store experience and the broader platform architecture.
-
 </div>
 
 </div>
@@ -2089,77 +1924,28 @@ Skills
 
 
 <p class="section-description">
-
 Core product, strategy, research and execution capabilities.
-
 </p>
 
 
 <div class="skills-grid">
 
-<div class="skill">
-Product Strategy
-</div>
-
-<div class="skill">
-Product Roadmap
-</div>
-
-<div class="skill">
-0→1 Product Building
-</div>
-
-<div class="skill">
-Feature Prioritization
-</div>
-
-<div class="skill">
-Product Discovery
-</div>
-
-<div class="skill">
-Stakeholder Management
-</div>
-
-<div class="skill">
-Payments
-</div>
-
-<div class="skill">
-FinTech
-</div>
-
-<div class="skill">
-Payment Gateways
-</div>
-
-<div class="skill">
-Payment Orchestration
-</div>
-
-<div class="skill">
-Domain-Driven Design
-</div>
-
-<div class="skill">
-Platform Product Management
-</div>
-
-<div class="skill">
-JIRA
-</div>
-
-<div class="skill">
-Confluence
-</div>
-
-<div class="skill">
-Figma
-</div>
-
-<div class="skill">
-AI Product Management
-</div>
+<div class="skill">Product Strategy</div>
+<div class="skill">Product Roadmap</div>
+<div class="skill">0→1 Product Building</div>
+<div class="skill">Feature Prioritization</div>
+<div class="skill">Product Discovery</div>
+<div class="skill">Stakeholder Management</div>
+<div class="skill">Payments</div>
+<div class="skill">FinTech</div>
+<div class="skill">Payment Gateways</div>
+<div class="skill">Payment Orchestration</div>
+<div class="skill">Domain-Driven Design</div>
+<div class="skill">Platform Product Management</div>
+<div class="skill">JIRA</div>
+<div class="skill">Confluence</div>
+<div class="skill">Figma</div>
+<div class="skill">AI Product Management</div>
 
 </div>
 
@@ -2188,78 +1974,29 @@ Learning & Certifications
 
 
 <p class="section-description">
-
 Professional development across Product Management,
 Artificial Intelligence, Generative AI and SEO.
-
 </p>
 
 
 <div class="cert-grid">
 
-<div class="cert">
-Aha! Product Management Professional Certificate
-</div>
-
-<div class="cert">
-Product Management First Steps
-</div>
-
-<div class="cert">
-Product Management: Building a Product Strategy
-</div>
-
-<div class="cert">
-Technical Product Management
-</div>
-
-<div class="cert">
-Product Management: Building a Product Roadmap
-</div>
-
-<div class="cert">
-Product Management: Customer Development
-</div>
-
-<div class="cert">
-Integrating GenAI into Business Strategy
-</div>
-
-<div class="cert">
-Generative AI for Product Managers
-</div>
-
-<div class="cert">
-Becoming an AI-First Product Leader
-</div>
-
-<div class="cert">
-Artificial Intelligence Foundations: Machine Learning
-</div>
-
-<div class="cert">
-Introduction to Artificial Intelligence
-</div>
-
-<div class="cert">
-What Is Generative AI?
-</div>
-
-<div class="cert">
-Your Top AI Questions Answered: AI Literacy for Everyone
-</div>
-
-<div class="cert">
-Learning Microsoft 365 Copilot for Work
-</div>
-
-<div class="cert">
-Ethics in the Age of Generative AI
-</div>
-
-<div class="cert">
-SEO Foundations
-</div>
+<div class="cert">Aha! Product Management Professional Certificate</div>
+<div class="cert">Product Management First Steps</div>
+<div class="cert">Product Management: Building a Product Strategy</div>
+<div class="cert">Technical Product Management</div>
+<div class="cert">Product Management: Building a Product Roadmap</div>
+<div class="cert">Product Management: Customer Development</div>
+<div class="cert">Integrating GenAI into Business Strategy</div>
+<div class="cert">Generative AI for Product Managers</div>
+<div class="cert">Becoming an AI-First Product Leader</div>
+<div class="cert">Artificial Intelligence Foundations: Machine Learning</div>
+<div class="cert">Introduction to Artificial Intelligence</div>
+<div class="cert">What Is Generative AI?</div>
+<div class="cert">Your Top AI Questions Answered: AI Literacy for Everyone</div>
+<div class="cert">Learning Microsoft 365 Copilot for Work</div>
+<div class="cert">Ethics in the Age of Artificial Intelligence</div>
+<div class="cert">SEO Foundations</div>
 
 </div>
 
@@ -2308,10 +2045,8 @@ PES University
 
 
 <p style="margin-top:12px;">
-
 7.75 CGPA on a scale of 10 and secured
 4 Distinction Awards during the course.
-
 </p>
 
 </div>
@@ -2336,9 +2071,7 @@ Kalyani Central Model School
 
 
 <p style="margin-top:12px;">
-
 Scored 75% in Higher Secondary.
-
 </p>
 
 </div>
@@ -2371,10 +2104,8 @@ Let's connect.
 
 
 <p class="section-description">
-
 Building something interesting in Payments, FinTech or
 Product? I'd be happy to connect.
-
 </p>
 
 
@@ -2391,11 +2122,9 @@ Phone
 
 
 <div class="contact-value">
-
 <a href="tel:+919831781326">
 +91-9831781326
 </a>
-
 </div>
 
 </div>
@@ -2410,11 +2139,9 @@ Email
 
 
 <div class="contact-value">
-
 <a href="mailto:sidharthgupta962@gmail.com">
 sidharthgupta962@gmail.com
 </a>
-
 </div>
 
 </div>
@@ -2429,15 +2156,12 @@ LinkedIn
 
 
 <div class="contact-value">
-
 <a
 href="https://www.linkedin.com/in/sidharthgupta962"
-target="_blank">
-
+target="_blank"
+rel="noopener noreferrer">
 linkedin.com/in/sidharthgupta962
-
 </a>
-
 </div>
 
 </div>
